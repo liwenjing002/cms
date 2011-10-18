@@ -1,0 +1,51 @@
+<div id="page">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">					
+
+      <h3>新增用户</h3>
+      <% if @user.errors.any? %>
+        <% @user.errors.full_messages.each do |msg| %>
+          <div class="box box-info"><%=msg%></div>
+        <% end %>
+      <%end%>
+
+      <%= simple_form_for(@user) do |f| %>
+        <fieldset>
+          <legend>新增用户</legend>
+
+          <p>
+            <label class="required" for="name">登录名</label><br>
+            <%= f.text_field :name,:class=>"half" %>
+          </p>
+
+          <p>
+            <label class="required" for="password">密码：</label><br>
+            <%= f.password_field :password,:class=>"half" %>
+          </p>
+
+          <p>
+            <label class="required" for="password_comfire">密码确认:</label><br>
+            <%= f.password_field :password_comfire,:class=>"half" %>
+          </p>
+
+          <p>
+            <label class="required" for="email">邮箱</label><br>
+            <%= f.text_field :email,:class=>"email" %>
+          </p>
+
+          <p>
+            <label class="required">权限:</label><br>
+            <%= f.association :permissions, :as=>:check_boxes, :input_html => { :size=>6 } %>
+          </p>
+
+          <p class="box"><input type="submit" class="btn btn-green big" value="提交"> or <input type="reset" class="btn" value="Reset"></p>
+
+            </fieldset>
+
+          <%end%>
+
+          </div>
+          <!-- End of Wrapper -->
+          </div>

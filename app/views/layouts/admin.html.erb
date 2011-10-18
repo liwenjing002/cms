@@ -1,0 +1,38 @@
+<html>
+ 
+  <head>
+<meta charset="utf-8">
+<title>Admin Template by www.865171.cn</title>
+<meta name="description" content="Administry - Admin Template by www.865171.cn">
+<meta name="keywords" content="Admin,Template">
+<!-- We need to emulate IE7 only when we are to use excanvas -->
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<![endif]-->
+<!-- Favicons --> 
+<link rel="shortcut icon" type="image/png" href="/images/favicons/favicon.png">
+<link rel="icon" type="image/png" href="/images/favicons/favicon.png">
+<link rel="apple-touch-icon" href="/images/favicons/apple.png">
+    <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
+
+    <link rel="stylesheet" href="/stylesheets/custom.css" type="text/css" />
+    
+    <script type="text/javascript" SRC="/javascripts/swfobject.js"></script>
+    <script type="text/javascript" SRC="/javascripts/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" SRC="/javascripts/jquery.ui.core.min.js"></script>
+    <script type="text/javascript" SRC="/javascripts/jquery.ui.widget.min.js"></script>
+    <script type="text/javascript" SRC="/javascripts/jquery.ui.tabs.min.js"></script>
+    <script type="text/javascript" SRC="/javascripts/jquery.tipTip.min.js"></script>
+    <script type="text/javascript" SRC="/javascripts/jquery.superfish.min.js"></script>
+    <script type="text/javascript" SRC="/javascripts/jquery.supersubs.min.js"></script>
+    <script type="text/javascript" SRC="/javascripts/jquery.validate_pack.js"></script>
+    <script type="text/javascript" SRC="/javascripts/jquery.nyroModal.pack.js"></script>
+   
+
+</head>
+  
+  
+<%= render(:partial => "admin/top") %>
+<%= yield %>
+<%= render(:partial => "admin/bottom") %>
+</html>

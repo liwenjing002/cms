@@ -1,0 +1,46 @@
+<div id="page">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">					
+      <div class="clear">&nbsp;</div>
+      <div class="dataTables_wrapper" id="example_wrapper">
+        <div id="add_user" class="dataTables_length"><%= link_to '新增用户', new_user_path %></div>
+        <div id="example_filter" class="dataTables_filter">
+         
+          Search: <input type="text"></div><table class="display stylized" id="example" style="width: 738px; ">
+          <thead>
+            <tr>
+              <th style="width: 125px;">登录名</th>
+              <th style="width: 137px; ">邮箱</th>
+              <th style="width: 137px; ">查看</th>
+              <th style="width: 170px; ">编辑</th>
+              <th style="width: 107px; ">删除</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @users.each do |user| %>
+            <tr class="gradeA odd">
+              <td><%= user.name %></td>
+              <td><%=user.email%></td>
+              <td><%= link_to 'Show', user %></td>
+              <td><%= link_to 'Edit', edit_user_path(user) %></td>
+              <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+            </tr>
+          <%end%>
+          </tbody>
+         
+        </table>
+         <%= will_paginate @users %>
+
+      </div>
+
+      <div class="clear">&nbsp;</div>
+
+    </section>
+    <!-- End of Left column/section -->
+
+          <!-- End of Right column/section -->
+          </div>
+          <!-- End of Wrapper -->
+          </div>
