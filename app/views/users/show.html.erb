@@ -1,20 +1,38 @@
-<p id="notice"><%= notice %></p>
+﻿
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+<div id="page" style="height:500px">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">					
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+      <h3>查看用户</h3>
 
-<p>
-  <b>Password:</b>
-  <%= @user.password %>
-</p>
 
+        <fieldset>
+          <legend>查看用户</legend>
+
+          <p>
+            <label class="required" for="name">登录名</label><br>
+             <%= @user.name %>
+          </p>
+
+
+          <p>
+            <label class="required" for="email">邮箱</label><br>
+             <%= @user.email %>
+          </p>
+
+          <p>
+            <label class="required">权限:</label><br>
+			 <% @user.permissions.each do |p|%>
+			 <span><input name="user[permission_ids][]" type="hidden" value=""><input checked="checked" class="check_boxes optional" id="user_permission_ids_1" name="user[permission_ids][]" size="6" type="checkbox" value="1"><label class="collection_check_boxes" for="user_permission_ids_1"><%=p.name%></label></span>
+			 <%end%>
+          </p>
+            </fieldset>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+          </div>
+          <!-- End of Wrapper -->
+          </div>

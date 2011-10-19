@@ -1,0 +1,48 @@
+<div id="page" style="height:500px">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">					
+
+      <h3>查看文章</h3>
+
+
+        <fieldset>
+          <legend>查看文章</legend>
+
+          <p>
+            <label class="required">标题</label><br>
+             <%= @article.title %>
+          </p>
+
+
+          <p>
+            <label class="required" >正文</label><br>
+             <%= @article.context %>
+          </p>
+		  
+
+		  <div class="clearfix leading">
+								<div class="column width3 first">
+				  <p>
+            <label class="required" >一级版块</label><br>
+             <%= @article.first_forum.name %>
+          </p>
+								</div>
+				
+								<div class="column width3" id ="next_select">
+            <label class="required" >二级版块</label><br>
+             <%= @article.second_forum.name %>
+          </p>
+								</div>
+							</div>		
+		  	  <p>
+
+
+            </fieldset>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
+          </div>
+          <!-- End of Wrapper -->
+          </div>

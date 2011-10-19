@@ -1,0 +1,35 @@
+﻿<div id="page" style="height:500px">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">					
+
+      <h3>新增/编辑版块</h3>
+      <% if @forum.errors.any? %>
+        <% @forum.errors.full_messages.each do |msg| %>
+          <div class="box box-info"><%=msg%></div>
+        <% end %>
+      <%end%>
+
+      <%= simple_form_for(@forum) do |f| %>
+        <fieldset>
+          <legend>新增/编辑版块</legend>
+
+          <p>
+            <label class="required" for="name">版块名称</label><br>
+            <%= f.text_field :name,:class=>"half" %>
+          </p>
+
+			<%= select( :forum,:father_id, Forum.find(:all,:conditions=>"father_id is null").collect {|p| [ p.name, p.id ] }, { :include_blank => true }) %>
+
+          <p class="box"><input type="submit" class="btn btn-green big" value="提交"> or <input type="reset" class="btn" value="Reset"></p>
+
+            </fieldset>
+
+          <%end%>
+		  <%= link_to 'Show', @forum %> |
+		<%= link_to 'Back', forums_path %>
+          </div>
+
+          <!-- End of Wrapper -->
+          </div>

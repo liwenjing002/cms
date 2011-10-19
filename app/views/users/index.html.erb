@@ -7,8 +7,12 @@
       <div class="dataTables_wrapper" id="example_wrapper">
         <div id="add_user" class="dataTables_length"><%= link_to '新增用户', new_user_path %></div>
         <div id="example_filter" class="dataTables_filter">
-         
-          Search: <input type="text"></div><table class="display stylized" id="example" style="width: 738px; ">
+         <form action="/users",method="get">
+          根据登录名查找: <input type="text" name = "name" value="<%=params[:name]%>">
+		  <input type="submit" class="btn btn-green big" value="提交">
+		  </form>
+		  </div>
+		  <table class="display stylized" id="example" style="width: 738px; ">
           <thead>
             <tr>
               <th style="width: 125px;">登录名</th>
@@ -31,7 +35,7 @@
           </tbody>
          
         </table>
-         <%= will_paginate @users %>
+         <%= will_paginate @users , :params => {:name=> params[:name]} %>
 
       </div>
 

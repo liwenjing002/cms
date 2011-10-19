@@ -8,7 +8,9 @@ class User < ActiveRecord::Base
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i,:message => "请输入正确的邮箱格式"
   validates_format_of :name, :with => /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/i,:message => "登录名格式:字母开头，允许5-16字节，允许字母数字下划线"
   validates_format_of :password, :with => /^[a-zA-Z0-9_]{5,15}$/i,:message => "密码格式:允许6-16字节，允许字母数字下划线"
-  has_many  :permissions
+  has_many  :use_permissions
+  has_many  :permissions,:through=>:use_permissions
+
 
 
   attr_accessor :password_comfire
@@ -34,6 +36,10 @@ class User < ActiveRecord::Base
   end
   
   def before_create
+    # hash the pass before creating a author
+    self.password = User.do_password_hash(self.password)
+  end
+  def before_update
     # hash the pass before creating a author
     self.password = User.do_password_hash(self.password)
   end

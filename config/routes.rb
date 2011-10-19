@@ -1,5 +1,14 @@
 Huanhao::Application.routes.draw do
  
+  resources :forums do
+  collection do
+  get :select_with_ajax
+  post :select_with_ajax
+  end
+  end
+
+  resources :articles
+
   get "admin/dashboard"
 
   resources :users do

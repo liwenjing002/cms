@@ -10,10 +10,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111018144044) do
+ActiveRecord::Schema.define(:version => 20111019062218) do
+
+  create_table "articles", :force => true do |t|
+    t.string   "title"
+    t.text     "context"
+    t.integer  "user_id"
+    t.integer  "read_num"
+    t.integer  "modi_user"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "first_forum_id"
+    t.integer  "second_forum_id"
+  end
+
+  create_table "forums", :force => true do |t|
+    t.string   "name"
+    t.integer  "father_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "permissions", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "use_permissions", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "permission_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

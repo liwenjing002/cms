@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def index
     @users = User.paginate :page => params[:page]||1,
                             :per_page=>10,
+							:conditions=>["name like ?",params[:name]? "%#{params[:name]}%":"%"],
                             :order => 'created_at DESC'
   end
 
@@ -99,7 +100,7 @@ class UsersController < ApplicationController
   
   def logout
     User.logout(session)
-    redirect_back_or_default ('/home')
+    redirect_back_or_default ('/users/login')
   end
   
   def forget_password

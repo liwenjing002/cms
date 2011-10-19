@@ -1,0 +1,32 @@
+﻿<div id="page" style="height:500px">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">					
+
+      <h3>查看版块</h3>
+
+
+        <fieldset>
+          <legend>查看版块</legend>
+
+          <p>
+            <label class="required" for="name">版块名称</label><br>
+             <%= @forum.name %>
+          </p>
+
+
+          <p>
+            <label class="required" for="email">上级版块</label><br>
+             <%= @forum.father.name if @forum.father%>
+          </p>
+
+            </fieldset>
+
+
+	<%= link_to 'Edit', edit_forum_path(@forum) %> |
+	<%= link_to 'Back', forums_path %>
+          </div>
+          <!-- End of Wrapper -->
+          </div>
+

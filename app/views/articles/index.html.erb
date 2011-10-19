@@ -1,0 +1,49 @@
+
+<div id="page">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">					
+      <div class="clear">&nbsp;</div>
+      <div class="dataTables_wrapper" id="example_wrapper">
+        <div id="add_user" class="dataTables_length"><%= link_to '新增文章', new_article_path %></div>
+        <div id="example_filter" class="dataTables_filter">
+         <form action="/articles",method="get">
+          根据文章标题查找: <input type="text" name = "title" value="<%=params[:title]%>">
+		  <input type="submit" class="btn btn-green big" value="提交">
+		  </form>
+		  </div>
+		  <table class="display stylized" id="example" style="width: 738px; ">
+          <thead>
+            <tr>
+              <th style="width: 125px;">文章标题</th>
+              <th style="width: 137px; ">查看</th>
+              <th style="width: 170px; ">编辑</th>
+              <th style="width: 107px; ">删除</th>
+            </tr>
+          </thead>
+          <tbody>
+          <% @articles.each do |article| %>
+            <tr class="gradeA odd">
+              <td><%= article.title %></td>
+              <td><%= link_to 'Show', article %></td>
+              <td><%= link_to 'Edit', edit_article_path(article) %></td>
+              <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
+            </tr>
+          <%end%>
+          </tbody>
+         
+        </table>
+         <%= will_paginate @article , :params => {:title=> params[:title]} %>
+
+      </div>
+
+      <div class="clear">&nbsp;</div>
+
+    </section>
+    <!-- End of Left column/section -->
+
+          <!-- End of Right column/section -->
+          </div>
+          <!-- End of Wrapper -->
+          </div>

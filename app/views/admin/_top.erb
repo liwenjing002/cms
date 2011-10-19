@@ -4,25 +4,18 @@
     <div id="title"><img src="/images/logo.png" alt="Administry"><!--<span>Administry</span> demo--></div>
     <!-- Top navigation -->
     <div id="topnav">
-      <a href="#"><img class="avatar" src="/images/user_32.png" alt=""></a>
-				Logged in as <b>Admin</b>
-      <span>|</span> <a href="#">Settings</a>
-      <span>|</span> <a href="#">Logout</a><br>
-      <small>You have <a href="#" class="high"><b>1</b> new message!</a></small>
+			欢迎您： <b><%=session[:login_name]%></b>
+      <span>|</span> <a href="/users/logout">退出</a><br>
     </div>
     <!-- End of Top navigation -->
     <!-- Main navigation -->
     <nav id="menu">
       <ul class="sf-menu sf-js-enabled sf-shadow">
-        <li><a href="dashboard.html">动态</a></li>
-        <li><a href="forms.html">文章管理</a></li>
-        <li><a href="forms.html">版块管理</a></li>
+        <li><a href="/dashboards">动态</a></li>
+        <li><a href="/articles">文章管理</a></li>
+        <li><a href="/forums">版块管理</a></li>
         <li><a href="/users">用户管理</a></li>	
       </ul>
     </nav>
-    <!-- End of Main navigation -->
-    <!-- Aside links -->
-    <aside><b>English</b> · <a href="#">Spanish</a> · <a href="#">German</a></aside>
-    <!-- End of Aside links -->
   </div>
 </header>

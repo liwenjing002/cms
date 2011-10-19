@@ -4,9 +4,10 @@ gem 'rails', '3.0.7'
 gem 'will_paginate',          '~> 3.0.pre2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem "simple_form",:git =>"https://github.com/plataformatec/simple_form.git"
+gem "simple_form"
 gem 'mysql'
-
+gem 'ckeditor'
+gem "paperclip"
 # Use unicorn as the web server
 # gem 'unicorn'
 

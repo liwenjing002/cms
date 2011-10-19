@@ -1,4 +1,4 @@
-<div id="page">
+<div id="page" style="height:500px">
   <!-- Wrapper -->
   <div class="wrapper">
     <!-- Left column/section -->
@@ -22,7 +22,7 @@
 
           <p>
             <label class="required" for="password">密码：</label><br>
-            <%= f.password_field :password,:class=>"half" %>
+            <%= f.password_field :password,:class=>"half",:value=>""%>
           </p>
 
           <p>
@@ -47,5 +47,7 @@
           <%end%>
 
           </div>
+		  <%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>
           <!-- End of Wrapper -->
           </div>
