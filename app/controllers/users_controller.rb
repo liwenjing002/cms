@@ -91,6 +91,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Hello! #{@user.name},"+ I18n.t('welcome_word')
       redirect_to "/admin/dashboard"
     else
+       @error_msg = "用户名/密码错误"
        render "login",:layout=>"login"
     end
    

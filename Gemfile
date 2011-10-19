@@ -1,12 +1,13 @@
 source 'http://rubygems.org'
-
+#source "http://gems.rubyforge.org"
 gem 'rails', '3.0.7'
 gem 'will_paginate',          '~> 3.0.pre2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem "simple_form"
+gem "simple_form",:git=>'git://github.com/plataformatec/simple_form.git'
 gem 'mysql'
-gem 'ckeditor'
+gem 'ckeditor', :git => 'git://github.com/galetahub/ckeditor.git'
+gem 'orm_adapter',:git=>'git://github.com/ianwhite/orm_adapter.git'
 gem "paperclip"
 # Use unicorn as the web server
 # gem 'unicorn'

@@ -37,6 +37,7 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.xml
   def create
+    params[:article][:user_id]= session[:user_id]
     @article = Article.new(params[:article])
 
     respond_to do |format|
@@ -56,6 +57,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
 
     respond_to do |format|
+      params[:article][:user_id]= session[:user_id]
       if @article.update_attributes(params[:article])
         format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
         format.xml  { head :ok }

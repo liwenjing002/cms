@@ -1,5 +1,7 @@
 Huanhao::Application.routes.draw do
  
+  resources :events
+
   resources :forums do
   collection do
   get :select_with_ajax

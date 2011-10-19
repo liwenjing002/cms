@@ -1,4 +1,4 @@
-<div id="page" style="height:500px">
+<div id="page" style="min-height:500px">
   <!-- Wrapper -->
   <div class="wrapper">
     <!-- Left column/section -->
@@ -14,11 +14,14 @@
             <label class="required">标题</label><br>
              <%= @article.title %>
           </p>
-
+                    <p>
+            <label class="required">发布人</label><br>
+             <%= @article.user.name %>
+          </p>
 
           <p>
             <label class="required" >正文</label><br>
-             <%= @article.context %>
+             <%= raw @article.context%>
           </p>
 		  
 
@@ -26,13 +29,13 @@
 								<div class="column width3 first">
 				  <p>
             <label class="required" >一级版块</label><br>
-             <%= @article.first_forum.name %>
+             <%= @article.first_forum.name if@article.first_forum%>
           </p>
 								</div>
 				
 								<div class="column width3" id ="next_select">
             <label class="required" >二级版块</label><br>
-             <%= @article.second_forum.name %>
+             <%= @article.second_forum.name if @article.second_forum%>
           </p>
 								</div>
 							</div>		

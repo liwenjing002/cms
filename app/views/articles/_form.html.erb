@@ -1,16 +1,22 @@
 <%= javascript_include_tag 'prototype' %>
 <%= javascript_include_tag :ckeditor %>
 
-<div id="page" style="height:900px">
+
+
+
+<div id="page" style="min-height: 800px">
   <!-- Wrapper -->
   <div class="wrapper">
     <!-- Left column/section -->
-    <section class="column width6 first" style="width=100%>					
+    <section class="column width6 first">					
+
 
       <h3>新增文章</h3>
       <% if @article.errors.any? %>
         <% @article.errors.full_messages.each do |msg| %>
-          <div class="box box-info"><%=msg%></div>
+          <div class = 'box box-info'>
+            <%=msg%>
+          </div>
         <% end %>
       <%end%>
 
@@ -21,40 +27,41 @@
           <p>
             <label class="required" for="title">标题</label><br>
             <%= f.text_field :title,:class=>"half" %>
-			
+
           </p>
 
-			<p>
-			<label for="productdesc">正文</label><br/>
-				  <%= f.ckeditor :context, :label => false, :input_html => { :toolbar => 'Full' ,:language=>"zh-cn"} %>
-				
-			</p>
-			
-			<div class="clearfix leading">
-								<div class="column width3 first">
-									<p>
-										<label for="productcat">一级版块</label><br>
-										<%first_forum = Forum.find(:all,:conditions=>"father_id is null").collect {|p| [ p.name, p.id ] }%>
-										
-										<%=  select  :article, :first_forum_id,first_forum,{:include_blank => '--请选择一级版块--'},
-              { "onchange" => remote_function(:with => "'first_forum_id='+value",:update => 'next_select', :url => { :controller=>:forums,:action => :select_with_ajax } ) }%>
-									</p>
-								</div>
-								
-								<div class="column width3" id ="next_select">
-								<%=  select  :article, :second_forum_id,[[@article.second_forum.name,@article.second_forum.id] ] if @article.second_forum%>
-								</div>
-							</div>
-			
-          <p class="box"><input type="submit" class="btn btn-green big" value="提交"> </p>
+          <p>
+            <label for="productdesc">正文</label><br/>
+            <%= f.input :context,:as => :ckeditor,:input_html => { :toolbar => 'Full' ,:language=>"zh-cn"} %>
+  <%#= f.ckeditor :context, :label => false, :input_html => { :toolbar => 'Full' ,:language=>"zh-cn"} %>
 
-            </fieldset>
+          </p>
 
-          <%end%>
+          <div class="clearfix leading">
+            <div class="column width3 first">
+              <p>
+                <label for="productcat">一级版块</label><br>
+                <%first_forum = Forum.find(:all,:conditions=>"father_id is null").collect {|p| [ p.name, p.id ] }%>
 
+                <%=  select  :article, :first_forum_id,first_forum,{:include_blank => '--请选择一级版块--'},
+                  { "onchange" => remote_function(:with => "'first_forum_id='+value",:update => 'next_select', :url => { :controller=>:forums,:action => :select_with_ajax } ) }%>
+              </p>
+            </div>
+
+            <div class="column width3" id ="next_select">
+              <%=  select  :article, :second_forum_id,[[@article.second_forum.name,@article.second_forum.id] ] if @article.second_forum%>
+            </div>
           </div>
-		  <%= link_to 'Show', @article %> |
-<%= link_to 'Back', articles_path %>
-          <!-- End of Wrapper -->
-          </div>
+
+            <p class="box"><input type="submit" class="btn btn-green big" value="提交"> </p>
+
+        </fieldset>
+
+      <%end%>
+
+  </div>
+
+  <%= link_to 'Show', @article %> |
+  <%= link_to 'Back', articles_path %>
+</div>
 
