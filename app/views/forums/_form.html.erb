@@ -19,6 +19,10 @@
             <label class="required" for="name">版块名称</label><br>
             <%= f.text_field :name,:class=>"half" %>
           </p>
+          <p>
+            <label class="required" for="name">版块顺序</label><br>
+            <%= f.input :order_num,:class=>"half" %>
+          </p>
 
 			<%= select( :forum,:father_id, Forum.find(:all,:conditions=>"father_id is null").collect {|p| [ p.name, p.id ] }, { :include_blank => true }) %>
 

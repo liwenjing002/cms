@@ -1,5 +1,5 @@
-<%= javascript_include_tag 'prototype' %>
 <%= javascript_include_tag :ckeditor %>
+<%= javascript_include_tag "prototype" %>
 
 
 
@@ -20,7 +20,7 @@
         <% end %>
       <%end%>
 
-      <%= simple_form_for(@article) do |f| %>
+      <%= simple_form_for @article,:html=>{:multipart=>true} do |f| %>
         <fieldset>
           <legend>新增文章</legend>
 
@@ -33,9 +33,15 @@
           <p>
             <label for="productdesc">正文</label><br/>
             <%= f.input :context,:as => :ckeditor,:input_html => { :toolbar => 'Full' ,:language=>"zh-cn"} %>
-  <%#= f.ckeditor :context, :label => false, :input_html => { :toolbar => 'Full' ,:language=>"zh-cn"} %>
+			<%#= f.ckeditor :context, :label => false, :input_html => { :toolbar => 'Full' ,:language=>"zh-cn"} %>
 
           </p>
+		  
+		  
+		  <p>
+		    <label for="productdesc">封面</label><br/>
+		<input type="file"  name ="picture"/>
+		  </P>
 
           <div class="clearfix leading">
             <div class="column width3 first">
@@ -64,4 +70,6 @@
   <%= link_to 'Show', @article %> |
   <%= link_to 'Back', articles_path %>
 </div>
+
+
 

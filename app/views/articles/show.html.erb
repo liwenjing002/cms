@@ -14,9 +14,16 @@
             <label class="required">标题</label><br>
              <%= @article.title %>
           </p>
+
+
                     <p>
             <label class="required">发布人</label><br>
-             <%= @article.user.name %>
+             <%= @article.user.name  if @article.user%>
+          </p>
+
+            <p>
+            <label class="required">封面</label><br>
+             <%= image_tag( @article.picture.data.url(:thumb), :alt => @article.title) if @article.picture %>
           </p>
 
           <p>

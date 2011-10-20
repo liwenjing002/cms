@@ -15,7 +15,10 @@
              <%= @forum.name %>
           </p>
 
-
+           <p>
+            <label class="required" for="name">版块在首页显示的顺序</label><br>
+             <%= @forum.order_num %>
+          </p>
           <p>
             <label class="required" for="email">上级版块</label><br>
              <%= @forum.father.name if @forum.father%>

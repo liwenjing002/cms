@@ -1,15 +1,16 @@
 Huanhao::Application.routes.draw do
- 
+match '/', :to => 'homes#index'
   resources :events
-
+   resources :homes
   resources :forums do
   collection do
   get :select_with_ajax
   post :select_with_ajax
   end
   end
-
+  
   resources :articles
+
 
   get "admin/dashboard"
 

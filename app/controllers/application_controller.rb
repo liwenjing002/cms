@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
   before_filter :is_login
   
   def redirect_back_or_default default
@@ -19,7 +18,7 @@ class ApplicationController < ActionController::Base
   def is_login
 
     if session[:is_login] || request.request_uri== "/users/login"|| request.request_uri== "/users/login.html"||
-        request.parameters[:controller] == "home" || session[:return_to] == "/"||
+        request.parameters[:controller] == "homes" || session[:return_to] == "/"||
         request.parameters[:action] == "connect_us"
     else
       session[:return_to] = request.request_uri

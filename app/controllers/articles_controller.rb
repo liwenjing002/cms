@@ -39,7 +39,10 @@ class ArticlesController < ApplicationController
   def create
     params[:article][:user_id]= session[:user_id]
     @article = Article.new(params[:article])
-
+   pic =  Ckeditor::Picture.create(
+      :data  => params[:picture]
+    )
+    @article.pictures_id = pic.id
     respond_to do |format|
       if @article.save
         format.html { redirect_to(@article, :notice => 'Article was successfully created.') }
@@ -79,4 +82,6 @@ class ArticlesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  
 end

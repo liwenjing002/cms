@@ -1,3 +1,4 @@
+<%= javascript_include_tag :defaults %>
 ﻿<div id="page">
   <!-- Wrapper -->
   <div class="wrapper">
@@ -7,14 +8,15 @@
       <div class="dataTables_wrapper" id="example_wrapper">
         <div id="add_user" class="dataTables_length"><%= link_to '新建版块', new_forum_path %></div>
         <div id="example_filter" class="dataTables_filter">
-                  <form action="/forums",method="get">
-          根据版块名称查找: <input type="text" name = "name" value="<%=params[:name]%>">
-		  <input type="submit" class="btn btn-green big" value="提交">
-		  </form>
-		  </div>
-		  <table class="display stylized" id="example" style="width: 738px; ">
+          <form action="/forums",method="get">
+                根据版块名称查找: <input type="text" name = "name" value="<%=params[:name]%>">
+            <input type="submit" class="btn btn-green big" value="提交">
+          </form>
+        </div>
+        <table class="display stylized" id="example" style="width: 738px; ">
           <thead>
             <tr>
+              <th style="width: 125px;">首页显示顺序</th>
               <th style="width: 125px;">版块名称</th>
               <th style="width: 137px; ">上级版块</th>
               <th style="width: 137px; ">查看</th>
@@ -23,19 +25,25 @@
             </tr>
           </thead>
           <tbody>
-           <% @forums.each do |forum| %>
-            <tr class="gradeA odd">
-              <td><%= forum.name %></td>
-              <td><%if forum.father%><%=forum.father.name%><%end%></td>
-              <td><%= link_to 'Show', forum %></td>
-              <td><%= link_to 'Edit', edit_forum_path(forum) %></td>
-              <td><%= link_to 'Destroy', forum, :confirm => 'Are you sure?', :method => :delete %></td>
-            </tr>
-          <%end%>
+            <% @forums.each do |forum| %>
+              <tr class="gradeA odd">
+                <td><%= forum.order_num %></td>
+                <td><%= forum.name %></td>
+                <td><%if forum.father%><%=forum.father.name%><%end%></td>
+                <td><%= link_to 'Show', forum %></td>
+                <td><%= link_to 'Edit', edit_forum_path(forum) %></td>
+
+                <td>
+                  <%if forum.order_num >9%><%= link_to 'Destroy', forum, :confirm => 'Are you sure?', :method => :delete %>
+                  <%end%>
+                </td>
+
+              </tr>
+            <%end%>
           </tbody>
-         
+
         </table>
-         <%= will_paginate @forum %>
+        <%= will_paginate @forum %>
 
       </div>
 
@@ -44,7 +52,7 @@
     </section>
     <!-- End of Left column/section -->
 
-          <!-- End of Right column/section -->
-          </div>
-          <!-- End of Wrapper -->
-          </div>
+    <!-- End of Right column/section -->
+  </div>
+  <!-- End of Wrapper -->
+</div>
