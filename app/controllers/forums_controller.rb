@@ -6,7 +6,7 @@ class ForumsController < ApplicationController
     @forums = Forum.paginate :page => params[:page]||1,
                             :per_page=>10,
 							:conditions=>["name like ?",params[:name]? "%#{params[:name]}%":"%"],
-                            :order => 'order_num ASC, father_id ASC'
+                            :order => 'id ASC, order_num ASC'
   end
 
   # GET /forums/1

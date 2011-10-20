@@ -30,7 +30,7 @@
             <tr class="gradeA odd">
               <td><%= article.title %></td>
               <td><%= article.first_forum.name if article.first_forum%></td>
-              <td><%= article.second_forum.name if article.second_forum%></td>
+              <td><%= article.forum.name if article.forum%></td>
                <td><%= article.user.name if article.user%></td>
               <td><%= link_to 'Show', article %></td>
               <td><%= link_to 'Edit', edit_article_path(article) %></td>

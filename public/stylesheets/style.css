@@ -5,7 +5,7 @@ select {font-size:12px; border-width:1px}
 textarea { font-size:12px; border:1px solid #ccc}
 form {margin:0}
 img {border:0;_vertical-align:middle}
-button, input.btn {background:#FFF8C5 url(/images//images/btnBg.gif) repeat-x 0 0;border:1px solid #B4C91A;color:#080;line-height:20px;height:20px}
+button, input.btn {background:#FFF8C5 url(/images/btnBg.gif) repeat-x 0 0;border:1px solid #B4C91A;color:#080;line-height:20px;height:20px}
 
 /*内容宽度背景等*/
 .twidth {width:965px;background:#fff;margin-right:auto;margin-left:auto;overflow-x:hidden}
@@ -22,7 +22,7 @@ a:hover {text-decoration:underline}
 
 /*列表标题样式*/
 ul.nl {list-style:none outside none; margin:0; padding:0}
-ul.nl li {line-height:22px;padding-left:15px;background:url(/images//images/iwms.gif) no-repeat 0 0}
+ul.nl li {line-height:22px;padding-left:15px;background:url(/images/iwms.gif) no-repeat 0 0}
 ul li.fixed {background:url(/images/iwms.gif) no-repeat 0 -50px}
 ul li.lock {background:url(/images/iwms.gif) no-repeat 0 -100px}
 ul.nl li img {_margin:6px 0}

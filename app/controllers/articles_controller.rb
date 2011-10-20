@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
                             :per_page=>10,
 							:conditions=>["title like ?",params[:title]? "%#{params[:title]}%":"%"],
                             :order => 'created_at DESC'
+                          
   end
 
   # GET /articles/1
@@ -38,11 +39,13 @@ class ArticlesController < ApplicationController
   # POST /articles.xml
   def create
     params[:article][:user_id]= session[:user_id]
+    if params[:article]
     @article = Article.new(params[:article])
    pic =  Ckeditor::Picture.create(
       :data  => params[:picture]
     )
-    @article.pictures_id = pic.id
+    @article.picture_id = pic.id
+    end
     respond_to do |format|
       if @article.save
         format.html { redirect_to(@article, :notice => 'Article was successfully created.') }

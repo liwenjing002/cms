@@ -34,7 +34,7 @@
                 <td><%= link_to 'Edit', edit_forum_path(forum) %></td>
 
                 <td>
-                  <%if forum.order_num >9%><%= link_to 'Destroy', forum, :confirm => 'Are you sure?', :method => :delete %>
+                  <%if forum.order_num and forum.order_num > 9%><%= link_to 'Destroy', forum, :confirm => 'Are you sure?', :method => :delete %>
                   <%end%>
                 </td>
 

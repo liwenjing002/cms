@@ -1,4 +1,4 @@
 		<p>
 										<label for="productcat">二级版块</label><br>
-<%= select( :article,:second_forum_id, @forum.collect{|p| [ p.name, p.id ] }) %>
+<%= select( :article,:forum_id, @forum.collect{|p| [ p.name, p.id ] }) %>
 </p>

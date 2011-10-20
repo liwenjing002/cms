@@ -33,16 +33,10 @@
       <div class="l"></div>
       <div class="r"></div>
       <div class="m">
-        <a href=""class="first">首页</a>
-        <a href="http://iwms.wangqi.com/show/free/v75/html/c2/">国内新闻</a>
-        <a href="http://iwms.wangqi.com/show/free/v75/html/c3/">国际新闻</a>
-        <a href="http://iwms.wangqi.com/show/free/v75/html/c4/">热点专题</a>
-        <a href="http://iwms.wangqi.com/show/free/v75/posts.aspx">讨论区</a>
-        <a href="http://iwms.wangqi.com/show/free/v75/XinWen/">医疗专题</a>
-        <a href="http://iwms.wangqi.com/show/free/v75/JunShiZhuanTi/">军事专题</a>
-        <a href="http://iwms.wangqi.com/show/free/v75/YuLeXinWen/">娱乐新闻</a>
-        <a href="http://iwms.wangqi.com/show/free/v75/TiYuXinWen/">体育新闻</a>
-        <a href="http://iwms.wangqi.com/show/free/v75/KeJiDongTai/">科技动态</a>
+        <a href="/"class="first">首页</a>
+        <% @forum_first.each do |forum| %>
+        <%=link_to forum.name,forums_homes_path(forum)%>
+        <%end%>
       </div>
     </div>
     <%= yield %>

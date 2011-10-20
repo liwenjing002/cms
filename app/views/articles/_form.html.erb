@@ -55,7 +55,7 @@
             </div>
 
             <div class="column width3" id ="next_select">
-              <%=  select  :article, :second_forum_id,[[@article.second_forum.name,@article.second_forum.id] ] if @article.second_forum%>
+              <%=  select  :article, :forum_id,[[@article.forum.name,@article.forum.id] ] if @article.forum%>
             </div>
           </div>
 

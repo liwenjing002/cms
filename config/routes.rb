@@ -1,7 +1,11 @@
 Huanhao::Application.routes.draw do
 match '/', :to => 'homes#index'
   resources :events
-   resources :homes
+  resources :homes do
+      collection do
+        get :forums
+      end
+  end
   resources :forums do
   collection do
   get :select_with_ajax

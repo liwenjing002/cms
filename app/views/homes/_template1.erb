@@ -1,0 +1,239 @@
+<div class="twidth">
+
+  <div id="navsub">
+    <div class="l"></div>
+    <div class="r"></div>
+    <div class="m">&nbsp;
+    </div>
+  </div>
+
+  <div id="middle">
+    <table width="100%" cellpadding="0" cellspacing="0">
+      <tbody><tr valign="top">
+          <td>
+            <div class="mf mR">
+              <div class="tl"></div>
+              <div class="tr"></div>
+              <div class="tm">
+                <span class="tt1"></span>
+              </div>
+              <div class="wrapper">
+                <div class="ml"></div>
+                <div class="mr"></div>
+                <div class="mm">
+                  <table width="100%">
+                    <tbody>
+                      <tr valign="top">
+                        <td width="300">
+                          <%if @toutiao_xinwen and @toutiao_xinwen.length >0%>
+                            <div id="slImg" style="width:293px;height:180px">
+                              <%=link_to image_tag(@toutiao_xinwen[0].picture.data.url(:content),:width=>"293",:height=>"180"),@toutiao_xinwen[0]%>
+                            </div>
+                            <div id="slTitle" style="width:293px">
+                              <div id="slLink">
+                                <%=link_to @toutiao_xinwen[0].title,@toutiao_xinwen[0] ,:target=>"_blank",:class=>"bla"%>
+                              </div>
+                            </div>
+                          <%end%>
+                        </td>
+                        <td><div class="head">
+                            <div id="firstHeadline">
+                              <center>
+                                <%if @toutiao_xinwen and @toutiao_xinwen.length >1%>
+                                  <%=link_to @toutiao_xinwen[1].title,@toutiao_xinwen[1],:target=>"_blank",:class=>"title" %>
+                                <%end%>
+                              </center>
+                            </div>
+                            <ul class="nl">
+                              <%if @toutiao_xinwen and @toutiao_xinwen.length >2%>
+                                <% for i in 2 .. @toutiao_xinwen.length %>
+                                  <li> <%=link_to @toutiao_xinwen[i].title,@toutiao_xinwen[i],:target=>"_blank" %></li>
+                                <%end%>
+                              <%end%>
+                            </ul>
+                          </div>
+                        </td></tr>
+                    </tbody></table>
+                </div>
+              </div>
+              <div class="bl"></div>
+              <div class="br"></div>
+              <div class="bm"></div>
+            </div>
+
+            <table id="dlAll" cellspacing="0" cellpadding="0" border="0" width="100%">
+              <tbody>
+                <tr>
+                  <td class="alignTop" width="50%">
+                    <%= render :partial => 'common/article_list1' ,:locals => { :code => "guoneixinwen"}%>
+                  </td>
+                  <td class="alignTop" width="50%">
+                    <%= render :partial => 'common/article_list1' ,:locals => { :code => "guoneixinwen"}%>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="alignTop" width="50%">
+                    <%= render :partial => 'common/article_list1' ,:locals => { :code => "guoneixinwen"}%>
+                  </td>
+                  <td class="alignTop" width="50%">
+                    <%= render :partial => 'common/article_list1' ,:locals => { :code => "guoneixinwen"}%>
+                  </td> 
+                </tr>
+              </tbody></table>
+
+            <div class="mf mR">
+              <div class="tl"></div>
+              <div class="tr"></div>
+              <div class="tm">
+                <div class="moreR"><a href="imgindex.aspx">更多&gt;&gt; </a></div>
+                <span class="tt2"></span>
+              </div>
+              <div class="wrapper">
+                <div class="mm">
+                  <div class="imgList"><ul><li style="width:20%"><a href="html/c2/2009-02/59.htm" target="_blank" title="内贾德呼吁审判以色列领导人战争罪行"><img src="upload/2.jpg" alt="内贾德呼吁审判以色列领导人战争罪行" width="120" height="90">内贾德呼吁审判</a></li><li style="width:20%"><a href="html/c3/2009-02/52.htm" target="_blank" title="越南南部金瓯省重现禽流感疫情 460只鸭子死亡"><img src="upload/2.jpg" alt="越南南部金瓯省重现禽流感疫情 460只鸭子死亡" width="120" height="90">越南南部金瓯省</a></li><li style="width:20%"><a href="YuLeXinWen/2009-02/45.htm" target="_blank" title="朝鲜主张持核国家举行“核军控会谈”"><img src="upload/2.jpg" alt="朝鲜主张持核国家举行“核军控会谈”" width="120" height="90">朝鲜主张持核国</a></li><li style="width:20%"><a href="TiYuXinWen/2009-02/39.htm" target="_blank" title="埃及总统将与阿巴斯会面商讨与哈马斯停火协议"><img src="upload/2.jpg" alt="埃及总统将与阿巴斯会面商讨与哈马斯停火协议" width="120" height="90">埃及总统将与阿</a></li><li style="width:20%"><a href="JunShiZhuanTi/2009-02/29.htm" target="_blank" title="以色列威胁将对哈马斯采取更多军事打击"><img src="upload/2.jpg" alt="以色列威胁将对哈马斯采取更多军事打击" width="120" height="90">以色列威胁将对</a></li></ul></div>
+                </div>
+              </div>
+            </div>
+            <div class="mR"><img style="display: none !important; visibility: hidden !important; opacity: 0 !important"></div>
+            <div class="height7"></div>
+            <div class="mframe" style="float:left; width:346px">
+              <div class="tl"></div>
+              <div class="tr"></div>
+              <div class="tm">
+                <div class="moreR"><a href="html/c10/">更多&gt;&gt; </a></div>
+                <span class="tt">科技新闻</span>
+              </div>
+              <div class="wrapper">
+                <div class="mm">
+                  <ul class="nl">
+                    <li><a href="XinWen/2009-06/1.htm" target="_blank">大师傅的负担释放但是防守的方式大幅</a></li>
+                    <li><a href="html/c2/2009-02/61.htm" target="_blank">蒙古国寒冬致6万多头牲畜死亡</a></li>
+                    <li><a href="html/c2/2009-02/60.htm" target="_blank">阿拉伯媒体称奥巴马已开始与伊朗接触</a></li>
+                    <li><a href="html/c2/2009-02/59.htm" target="_blank">内贾德呼吁审判以色列领导人战争罪行</a></li>
+                    <li><a href="html/c2/2009-02/58.htm" target="_blank">穆巴拉克阿巴斯讨论加沙局势</a></li>
+                    <li><a href="html/c2/2009-02/57.htm" target="_blank">以军空袭加沙地带南部炸伤2人</a></li>
+                    <li><a href="html/c2/2009-02/56.htm" target="_blank">哈马斯接受为期1年的停火协议(视频)</a></li>
+                    <li><a href="html/c3/2009-02/55.htm" target="_blank" title="朝鲜军方称朝鲜半岛无核化决不是朝方弃核">朝鲜军方称朝鲜半岛无核化决不是朝方</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="mframe mR" style="float:right; width:346px;">
+              <div class="tl"></div>
+              <div class="tr"></div>
+              <div class="tm">
+                <div class="moreR"><a href="html/c7/">更多&gt;&gt; </a></div>
+                <span class="tt">军事新闻</span>
+              </div>
+              <div class="wrapper">
+                <div class="mm">
+                  <ul class="nl">
+                    <li><a href="XinWen/2009-06/1.htm" target="_blank">大师傅的负担释放但是防守的方式大幅</a></li>
+                    <li><a href="html/c2/2009-02/61.htm" target="_blank">蒙古国寒冬致6万多头牲畜死亡</a></li>
+                    <li><a href="html/c2/2009-02/60.htm" target="_blank">阿拉伯媒体称奥巴马已开始与伊朗接触</a></li>
+                    <li><a href="html/c2/2009-02/59.htm" target="_blank">内贾德呼吁审判以色列领导人战争罪行</a></li>
+                    <li><a href="html/c2/2009-02/58.htm" target="_blank">穆巴拉克阿巴斯讨论加沙局势</a></li>
+                    <li><a href="html/c2/2009-02/57.htm" target="_blank">以军空袭加沙地带南部炸伤2人</a></li>
+                    <li><a href="html/c2/2009-02/56.htm" target="_blank">哈马斯接受为期1年的停火协议(视频)</a></li>
+                    <li><a href="html/c3/2009-02/55.htm" target="_blank" title="朝鲜军方称朝鲜半岛无核化决不是朝方弃核">朝鲜军方称朝鲜半岛无核化决不是朝方</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td width="250">
+            <div class="lframe">
+              <div class="tl"></div>
+              <div class="tr"></div>
+              <div class="tm"><div class="moreR"><a href="imgindex.aspx">更多&gt;&gt; </a></div>
+                <span class="tt1">网站公告</span>
+              </div>
+              <div class="wrapper">
+                <div class="ml"></div>
+                <div class="mr"></div>
+                <div class="mm" style="height:218px; overflow:hidden;">
+                  <div class="bul"><a href="bulletin.aspx?id=11" target="_blank">价格和价格和</a> <span class="gray">[11-04]</span><br><a href="bulletin.aspx?id=10" target="_blank">失去我热热饿热热热热热</a> <span class="gray">[11-04]</span><br><a href="bulletin.aspx?id=9" target="_blank">你好忙的的反馈答复士大夫</a> <span class="gray">[11-04]</span><br><a href="bulletin.aspx?id=8" target="_blank">韩国客户即可缓解</a> <span class="gray">[11-04]</span><br><a href="bulletin.aspx?id=7" target="_blank">和法国和法国和</a> <span class="gray">[11-04]</span><br><a href="bulletin.aspx?id=6" target="_blank">色特人玩儿玩儿玩儿玩儿玩儿</a> <span class="gray">[11-04]</span><br><a href="bulletin.aspx?id=5" target="_blank">更好看黄金客户即可</a> <span class="gray">[11-04]</span><br><a href="bulletin.aspx?id=4" target="_blank">规划过几个环节</a> <span class="gray">[11-04]</span><br><a href="bulletin.aspx?id=3" target="_blank">符合符合法规和规范化肥回复光滑和法国和法国和</a> <span class="gray">[11-04]</span><br><a href="bulletin.aspx?id=2" target="_blank">感到反感的风格的风格大方</a> <span class="gray">[11-04]</span><br><a href="bulletin.aspx?id=1" target="_blank">赴美旅游团车祸伤亡人员家属大法官地方</a> <span class="gray">[11-04]</span></div>
+                    </div>
+                    </div>
+                    <div class="bl"></div>
+                    <div class="br"></div>
+                    <div class="bm"></div>
+                    </div>
+
+
+                    <div class="lframe">
+                      <div class="tm"><div class="moreR"><a href="html/c4/">更多&gt;&gt; </a></div>
+                        <span class="tt">热点专题</span>
+                      </div>
+                      <div class="wrapper">
+                        <div class="mm">
+                          <div class="right">
+                            <div class="summary"><div class="imgDiv" style="float:left"><a href="html/c4/2009-02/19.htm" class="imgLink" target="_blank"><img src="upload/2.jpg" alt="中国游客在美遇车祸事件遭遇5点质疑" width="120" height="90"></a></div><div class="cont"><div class="title"><a href="html/c4/2009-02/19.htm" class="nLink" target="_blank" title="中国游客在美遇车祸事件遭遇5点质疑">中国游客在美遇车祸</a></div><div class="sum">有消息称，驾驶事故巴士的司机年龄</div><div class="foot"><div style="float:right"><a href="html/c4/2009-02/19.htm" target="_blank">[查看全文]</a></div></div></div></div></div>
+                          <ul class="nl">
+                            <li><a href="html/c4/2009-02/21.htm" target="_blank" title="巴基斯坦警方称一名联合国官员遭绑架">巴基斯坦警方称一名联合国官员遭绑</a></li>
+                            <li><a href="html/c4/2009-02/20.htm" target="_blank" title="中国将出巨资购国际矿业巨头资产 达150亿美元">中国将出巨资购国际矿业巨头资产 </a></li>
+                            <li><a href="html/c4/2009-02/19.htm" target="_blank" title="中国游客在美遇车祸事件遭遇5点质疑">中国游客在美遇车祸事件遭遇5点质</a></li>
+                            <li><a href="html/c4/2009-02/18.htm" target="_blank" title="魔方之父再创新玩具" 鲁比克360"(组图)"="">魔方之父再创新玩具"鲁比克360"(组</a></li>
+                            <li><a href="html/c4/2009-02/17.htm" target="_blank" title="哥伦比亚反政府分子宣布释放四名人质">哥伦比亚反政府分子宣布释放四名人</a></li>
+                            <li><a href="html/c4/2009-02/16.htm" target="_blank">欧盟一体化：非洲人的前车之鉴？</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="lframe">
+                      <div class="tm"><div class="moreR"><a href="html/c6/">更多&gt;&gt; </a></div>
+                        <span class="tt">医学专题</span>
+                      </div>
+                      <div class="wrapper">
+                        <div class="mm">
+                          <div class="right">
+                            <div class="summary"><div class="imgDiv" style="float:left"><a href="XinWen/2009-02/8.htm" class="imgLink" target="_blank"><img src="upload/2.jpg" alt="金正日获提名将角逐最高人民会议席位" width="120" height="90"></a></div><div class="cont"><div class="title"><a href="XinWen/2009-02/8.htm" class="nLink" target="_blank" title="金正日获提名将角逐最高人民会议席位">金正日获提名将角逐</a></div><div class="sum">朝鲜最高领导人金正日1日被推举为朝鲜</div><div class="foot"><div style="float:right"><a href="XinWen/2009-02/8.htm" target="_blank">[查看全文]</a></div></div></div></div></div>
+                          <ul class="nl">
+                            <li><a href="XinWen/2009-06/1.htm" target="_blank" title="大师傅的负担释放但是防守的方式大幅">大师傅的负担释放但是防守的方式大</a></li>
+                            <li><a href="XinWen/2009-02/13.htm" target="_blank" title="以官员称土耳其已无资格参加中东和谈">以官员称土耳其已无资格参加中东和</a></li>
+                            <li><a href="XinWen/2009-02/11.htm" target="_blank" title="各色" 面具怪人"汇聚德国弗莱堡嘉年华(组图)"="">各色"面具怪人"汇聚德国弗莱堡嘉年</a></li>
+                            <li><a href="XinWen/2009-02/10.htm" target="_blank" title="秘鲁美国自由贸易协定生效 90%秘鲁产品零关税">秘鲁美国自由贸易协定生效 90%秘鲁</a></li>
+                            <li><a href="XinWen/2009-02/9.htm" target="_blank" title="印媒称在外国帮助下巴基斯坦导弹实力领先印度">印媒称在外国帮助下巴基斯坦导弹实</a></li>
+                            <li><a href="XinWen/2009-02/8.htm" target="_blank" title="金正日获提名将角逐最高人民会议席位">金正日获提名将角逐最高人民会议席</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="lframe">
+                      <div class="tm"><div class="moreR"><a href="html/c23/">更多&gt;&gt; </a></div>
+                        <span class="tt">讨论区新帖</span>
+                      </div>
+                      <div class="wrapper">
+                        <div class="mm" style="padding:9px 3px">
+                          <ul class="pl"><li><a href="thread.aspx?id=10" target="blank">你爱怀疑 你爱规定</a></li><li><a href="thread.aspx?id=8" target="blank">想换一大幅度开始你都有 的</a></li><li><a href="thread.aspx?id=5" target="blank">HONNY 远方的你一切可好</a></li><li><a href="thread.aspx?id=4" target="blank">天气可能要回升了</a></li><li><a href="thread.aspx?id=9" target="blank">明明很想生气却又止不住笑意</a></li><li><a href="thread.aspx?id=7" target="blank">常常想你说的话是不是别有用心</a></li><li><a href="thread.aspx?id=6" target="blank">what＂s wrong with me? 爱你</a></li><li><a href="thread.aspx?id=3" target="blank" title="康熙来了蔡康永真是个名副其实的读书人">康熙来了蔡康永真是个名副其实的读</a></li><li><a href="thread.aspx?id=2" target="blank">中国古代史我比较感兴趣</a></li></ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="lframe">
+                      <div class="tm">
+                        <span class="tt2">网站调查</span>
+                      </div>
+                      <div class="wrapper">
+                        <div class="mm" style="padding:9px;">
+                          <form action="pollView.aspx" method="post" target="DvnPoll"><div style="padding:5px;"><div><b>你从何处获知本站的？</b></div><div style="padding:6px 0"><input type="hidden" name="id" value="1"><input type="radio" value="0" name="item">电视媒体报道<br><input type="radio" value="1" name="item">互联网 搜索<br><input type="radio" value="2" name="item">报纸 杂志<br><input type="radio" value="3" name="item">与朋友的谈话<br><input type="radio" value="4" name="item">其他方式<br></div><div align="center"><button type="submit" class="pollSubmit">投票</button>&nbsp; &nbsp;<button type="button" class="pollView" onclick="ViewPoll(1)">查看</button></div></div></form>
+                                </div>
+                                </div>
+                                </div>
+                                </td>
+                                </tr>
+                                </tbody></table>
+                                <div class="mframe">
+                                  <div class="tm">
+                                    <span class="tt1">友情链接</span>
+                                  </div>
+                                  <div class="wrapper">
+                                    <div class="mm links">
+                                      <a href="http://www.wangqi.com" target="_blank" style="width:10%">网奇</a><a href="http://www.iwms.net/" target="_blank" style="width:10%">iwms网站管理系统</a>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+                                <div id="login" class="conInfo" style="display:none;"><form id="loginForm" method="post" action="login.aspx" style="padding:5px 0"><ul style="list-style:none;margin:0;padding:0;text-align:center;"><li><input type="text" class="inputbg" name="memberName" size="15" maxlength="50" onblur="iwms.logBlur(this)" onfocus="iwms.logFocus(this)" value="用户名" style="color:#999"> <select name="keepLogin" style="width:60px"><option value="">不保留</option><option value="day">一天</option><option value="week">一周</option><option value="month">一月</option><option value="year">一年</option></select></li><li style="padding:10px 0"><input type="text" class="inputbg" value="密码" name="hdPass" size="15" style="color:#999" onfocus="iwms.logFocus(this)"><input type="password" class="inputbg" style="display:none" name="memberPass" size="15" maxlength="50" onblur="iwms.logBlur(this)">&nbsp;<button type="submit" onclick="return iwms.logChk(this);" style="width:60px">登 录</button></li><li><a href="memberreg.aspx">注册</a>　<a href="memberactive.aspx">激活</a>　<a href="memberLostpass.aspx">忘记密码</a></li></ul></form></div>
+                                        </div>
