@@ -19,7 +19,7 @@ class AddCodeToForum < ActiveRecord::Migration
      Forum.create({:name=>"国内新闻",:order_num=>1,:code=>"guoneixinwen",:father_id=>f.id})
      Forum.create({:name=>"国际新闻",:order_num=>1,:code=>"guojixinwen",:father_id=>f.id})
      Forum.create({:name=>"杭州动态",:order_num=>1,:code=>"hangzhoudongtai",:father_id=>f.id})
-     Forum.create({:name=>"协会动态",:order_num=>1,:code=>"xihuidongtai",:father_id=>f.id})
+     Forum.create({:name=>"协会动态",:order_num=>1,:code=>"xiehuidongtai",:father_id=>f.id})
      Forum.create({:name=>"图片新闻",:order_num=>1,:code=>"tupianxinwen",:father_id=>f.id})
 
     f = Forum.find_by_code("jishu")
