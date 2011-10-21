@@ -8,6 +8,7 @@
     <link rel="icon" href="/images/TriTanium.png" type="image/x-icon"/>
     <%= stylesheet_link_tag "style" %>
      <%= javascript_include_tag 'iwms' %>
+      <%= javascript_include_tag 'show' %>
   </head>
   <script>
 function addfavorite(url,name)
@@ -31,7 +32,7 @@ else if (window.sidebar)
           <tbody>
             <tr valign="top">
               <td width="360" style=" padding-top:5px;">
-                <a href="http://www.wangqi.com/"><img src="/images/Logo.png" border="0" alt="" ></a>
+                 <%=link_to image_tag("/images/Logo.png"),"/"%>
               </td>
               <td></td>
             </tr>
