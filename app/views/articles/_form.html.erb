@@ -30,6 +30,12 @@
 
           </p>
 
+                    <p>
+            <label  for="title">作者</label><br>
+            <%= f.text_field :author,:class=>"half" %>
+
+          </p>
+
           <p>
             <label for="productdesc">正文</label><br/>
             <%= f.input :context,:as => :ckeditor,:input_html => { :toolbar => 'Full' ,:language=>"zh-cn"} %>

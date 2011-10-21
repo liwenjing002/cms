@@ -20,12 +20,12 @@
             <%= f.text_field :name,:class=>"half" %>
           </p>
           <p>
-           <%if params[:action] == 'new'%>
+           <%#if params[:action] == 'new'%>
              <p>
             <label class="required" for="name">版块代号</label><br>
             <%= f.text_field :code,:class=>"half" %>
           </p>
-          <%end%>
+          <%#end%>
           <p>
             <label class="required" for="name">版块顺序</label><br>
             <%= f.input :order_num,:class=>"half" %>

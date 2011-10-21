@@ -15,7 +15,10 @@
              <%= @article.title %>
           </p>
 
-
+                    <p>
+            <label class="required">作者</label><br>
+             <%= @article.author%>
+          </p>
                     <p>
             <label class="required">发布人</label><br>
              <%= @article.user.name  if @article.user%>

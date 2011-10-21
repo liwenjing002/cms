@@ -1,6 +1,6 @@
 <div class="lf mR">
   <div class="tm">
-    <div class="moreR">&nbsp;<a href="html/c2/">更多&gt;&gt; </a></div>
+    <div class="moreR"><%=link_to("更多 > >",forums_homes_path(Forum.find_by_code(code)))%></div>
     <span class="tt"><%= Forum.find_by_code(code).name %></span>
   </div>
   <% @articles = Forum.find_by_code(code).articles(:order=>"create_at desc",:limit=>"10") %>
@@ -10,11 +10,11 @@
         <%if @articles and @articles.length >0%>
           <div class="summary">
             <div class="imgDiv" style="float:left">
-              <%=link_to image_tag(@articles[0].picture.data.url(:content),:width=>"120",:height=>"90"),@articles[0]%>
+              <%=link_to image_tag(@articles[0].picture ?  @articles[0].picture.data.url(:content) : "/images/missing.png",:width=>"120",:height=>"90"),articles_homes_path(@articles[0]),:tager=>"_blank"%>
             </div>
             <div class="cont">
               <div class="title">
-                <%=link_to @articles[0].title,@articles[0],:tager=>"_blank"%>
+                <%=link_to @articles[0].title,articles_homes_path(@articles[0]),:tager=>"_blank"%>
               </div>
               <div class="sum"><%= strip_html @articles[0].context,40%></div>
             </div>
@@ -26,7 +26,7 @@
     <ul class="nl">
       <%if @articles and @articles.length >1%>
         <%for i in 1 .. @articles.length%>
-          <li><<%=link_to @articles[i].title,@articles[i],:tager=>"_blank"%></li>
+          <li><%=link_to @articles[i].title,articles_homes_path(@articles[i]),:tager=>"_blank"%></li>
         <%end%>
       <%end%>
     </ul>

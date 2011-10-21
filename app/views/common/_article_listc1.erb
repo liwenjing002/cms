@@ -1,0 +1,20 @@
+<% a = Forum.find_by_code(code).articles(:order=>"create_at desc",:limit=>"8") %>
+<div class="tl"></div>
+<div class="tr"></div>
+<div class="tm"><div class="moreR"> <%=link_to("更多 > >",forums_homes_path(Forum.find_by_code(code)))%></div>
+  <span class="tt1"><%= Forum.find_by_code(code).name %></span>
+</div>
+<div class="wrapper">
+  <div class="ml"></div>
+  <div class="mr"></div>
+  <div class="mm" style="height:218px; overflow:hidden;">
+    <div class="bul">
+      <%a.each do |article|%>
+          <%=link_to strip_html(article.title,len=42,endss="..."),articles_homes_path(article),:tager=>"_blank"%>
+        <%end%>
+    </div>
+  </div>
+</div>
+<div class="bl"></div>
+<div class="br"></div>
+<div class="bm"></div>

@@ -57,5 +57,13 @@ module ApplicationHelper
     end
     return text
   end
+
+  def forum_tab forum
+  if forum.father ==nil
+     link_to("首页","/") +  "→ "+  link_to(forum.name,forums_homes_path(forum))
+  else
+     link_to("首页","/") +  "→ "+  link_to(forum.father.name,forums_homes_path(forum.father))+  "→ "+  link_to(forum.name,forums_homes_path(forum))
+  end
+  end
   
 end

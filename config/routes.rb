@@ -4,6 +4,7 @@ match '/', :to => 'homes#index'
   resources :homes do
       collection do
         get :forums
+        get :articles
       end
   end
   resources :forums do
@@ -13,7 +14,7 @@ match '/', :to => 'homes#index'
   end
   end
   
-  resources :articles
+  resources :articles 
 
 
   get "admin/dashboard"

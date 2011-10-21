@@ -1,4 +1,4 @@
-		<p>
-										<label for="productcat">二级版块</label><br>
-<%= select( :article,:forum_id, @forum.collect{|p| [ p.name, p.id ] }) %>
+<p>
+  <label for="productcat">二级版块</label><br>
+  <%= select( :article,:forum_id, @forum.collect{|p| [ p.name, p.id ] },{:include_blank => '--请选择一级版块--'}) %>
 </p>
