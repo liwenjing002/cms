@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20111021083110) do
   end
 
   create_table "ckeditor_assets", :force => true do |t|
-    t.string   "data_file_name",                  :default => "", :null => false
+    t.string   "data_file_name",                  :null => false
     t.string   "data_content_type"
     t.integer  "data_file_size"
     t.integer  "assetable_id"
