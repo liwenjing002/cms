@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @users = User.paginate :page => params[:page]||1,
                             :per_page=>10,
 							:conditions=>["name like ?",params[:name]? "%#{params[:name]}%":"%"],
-                            :order => 'created_at DESC'
+                            :order => 'updated_at DESC'
   end
 
   # GET /users/1

@@ -1,4 +1,6 @@
 Huanhao::Application.routes.draw do
+  resources :friend_links
+
 match '/', :to => 'homes#index'
   resources :events
   resources :homes do

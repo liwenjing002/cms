@@ -1,0 +1,52 @@
+<%= javascript_include_tag :defaults %>
+﻿<div id="page">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">
+      <div class="clear">&nbsp;</div>
+      <div class="dataTables_wrapper" id="example_wrapper">
+        <div id="add_user" class="dataTables_length"><%= link_to '新建友情链接', new_friend_link_path %></div>
+        <div id="example_filter" class="dataTables_filter">
+          <form action="/friend_links",method="get">
+                根据网站名称查找: <input type="text" name = "name" value="<%=params[:name]%>">
+            <input type="submit" class="btn btn-green big" value="提交">
+          </form>
+        </div>
+        <table class="display stylized" id="example" style="width: 738px; ">
+          <thead>
+            <tr>
+              <th style="width: 125px;">网站名称</th>
+              <th style="width: 137px; ">网站链接</th>
+              <th style="width: 137px; ">查看</th>
+              <th style="width: 170px; ">编辑</th>
+              <th style="width: 107px; ">删除</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @friend_links.each do |friend_link| %>
+              <tr class="gradeA odd">
+                <td><%= friend_link.name %></td>
+                <td><%= friend_link.url %></td>
+                <td><%= link_to 'Show', friend_link %></td>
+                <td><%= link_to 'Edit', edit_friend_link_path(friend_link) %></td>
+                <td><%= link_to 'Destroy', friend_link, :confirm => 'Are you sure?', :method => :delete %></td>
+              </tr>
+            <%end%>
+          </tbody>
+
+        </table>
+        <%= will_paginate @friend_links,:params => {:name=> params[:name]} %>
+
+      </div>
+
+      <div class="clear">&nbsp;</div>
+
+    </section>
+    <!-- End of Left column/section -->
+
+    <!-- End of Right column/section -->
+  </div>
+  <!-- End of Wrapper -->
+</div>
+

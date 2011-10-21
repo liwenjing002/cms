@@ -1,0 +1,30 @@
+﻿<div id="page" style="height:500px">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">
+
+      <h3>查看友情链接</h3>
+
+
+      <fieldset>
+        <legend>查看友情链接</legend>
+
+        <p>
+          <label class="required" for="name">网站名称</label><br/>
+          <%= @friend_link.name %>
+        </p>
+
+        <p>
+          <label class="required" for="name">网站链接</label><br/>
+          <%= @friend_link.url %>
+        </p>
+      </fieldset>
+
+
+      <%= link_to 'Edit', edit_friend_link_path(@friend_link) %> |
+      <%= link_to 'Back', friend_links_path %>
+  </div>
+  <!-- End of Wrapper -->
+</div>
+

@@ -1,0 +1,39 @@
+﻿<div id="page" style="height:500px">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">
+
+      <h3>新增/编辑友情链接</h3>
+      <% if @friend_link.errors.any? %>
+        <% @friend_link.errors.full_messages.each do |msg| %>
+          <div class="box box-info"><%=msg%></div>
+        <% end %>
+      <%end%>
+
+      <%= simple_form_for(@friend_link) do |f| %>
+        <fieldset>
+          <legend>新增/编辑友情链接</legend>
+
+          <p>
+            <label class="required" for="name">网站名称</label><br/>
+            <%= f.text_field :name,:class=>"half" %>
+          </p>
+
+          <p>
+            <label class="required" for="name">网站链接</label><br/>
+            <%= f.text_field :url,:class=>"half" %>
+          </p>
+          <p class="box"><input type="submit" class="btn btn-green big" value="提交"/>
+            or
+            <input type="reset" class="btn" value="重置"/></p>
+
+        </fieldset>
+
+      <%end%>
+      <%= link_to 'Show', @friend_link %> |
+      <%= link_to 'Back', friend_links_path %>
+  </div>
+
+  <!-- End of Wrapper -->
+</div>
