@@ -106,7 +106,7 @@ ul.conInfo  li {float:left;width:50%}
 .alignCenterTop {vertical-align:top;text-align:center}
 
 /* 网站头 */
-#sitehead {overflow:hidden;_width:100%; background:url(/images/sit.gif) repeat-x bottom; height:98px; overflow:hidden; }
+#sitehead {overflow:hidden;_width:100%; background:url(/images/site.png) ; height:98px; overflow:hidden; }
 #sitehead .m{ width:965px; margin:0 auto; padding-top:5px; color:#3F3F3F;}
 #sitehead a{color:#3F3F3F;}
 #sitehead .l {display:none}

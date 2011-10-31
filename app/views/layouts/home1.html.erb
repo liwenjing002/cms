@@ -3,25 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="gb2312">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
-    <title>杭州环保协会</title>
+    <title>杭州环保产业协会</title>
 
     <link rel="icon" href="/images/TriTanium.png" type="image/x-icon"/>
     <%= stylesheet_link_tag "style" %>
      <%= javascript_include_tag 'iwms' %>
+     <%= javascript_include_tag 'jquery' %>
       <%= javascript_include_tag 'show' %>
+     <%= javascript_include_tag 'page_context' %>
+    <script type="text/javascript">iwms.urlPrefix="";iwms.guestAdd=false;</script>
   </head>
-  <script>
-function addfavorite(url,name)
-{
-if (document.all)
-{
-  window.external.addFavorite(url,name)
-}
-else if (window.sidebar)
-{ window.sidebar.addPanel(name, url,"")
-}
-}
-</script>
   <body>
 
     <div id="sitehead">
@@ -53,7 +44,7 @@ else if (window.sidebar)
     <%= yield %>
     <div id="footer">
       <div class="bmenu">网站简介 | 广告服务 | 网站地图 | 帮助信息 | 联系方式</div>
-      Copyright; <a href="" target="_blank">杭州环保协会</a> Powered by <span style="font-weight:bold;font-family:arial;">李文静</span>
+      Copyright; <a href="" target="_blank">杭州环保产业协会</a> Powered by <span style="font-weight:bold;font-family:arial;">李文静</span>
     </div>
 
 
