@@ -20,7 +20,7 @@
             <div class="tr"></div>
             <div class="tm">
               <div class="moreR">
-			背景：<script type="text/javascript">WriteBg()</script>
+			背景：
                 <img src="/images/pic/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#EDF0F5" alt="#EDF0F5" onclick="ContentBg(&quot;#EDF0F5&quot;)" />
                 <img src="/images/pic/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#FAFBE6" alt="#FAFBE6" onclick="ContentBg(&quot;#FAFBE6&quot;)"/>
                 <img src="/images/pic/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#FFF2E2" alt="#FFF2E2" onclick="ContentBg(&quot;#FFF2E2&quot;)"/>
@@ -71,7 +71,7 @@
             <div class="tm">
               <span class="tt">相关文章</span> &nbsp; &nbsp; &nbsp;
             </div>
-            <% re_articles = Article.find(:all,:conditions=>["forum_id = ? or first_forum_id = ?",@article.forum_id,@article.first_forum_id],:limit=>10) %>
+            <% re_articles = Article.find(:all,:conditions=>["(forum_id = ? or first_forum_id = ? ) and id !=#{@article.id}",@article.forum_id,@article.first_forum_id],:limit=>10) %>
             <% if  re_articles.length>0%>
               <% for i in 0 .. re_articles.length-1 %>
 

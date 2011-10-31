@@ -152,7 +152,7 @@
               <%= render :partial => 'common/article_listb1' ,:locals => { :code => "huanbaopeixun"}%>
             </div>
             <div class="mframe mR" style="float:right; width:346px;">
-              <%= render :partial => 'common/article_listb1' ,:locals => { :code => "kepuzhishi"}%>
+              <%= render :partial => 'common/article_listb1' ,:locals => { :code => "kepu"}%>
             </div>
             <div class="mframe" style="float:left; width:346px">
               <%= render :partial => 'common/article_listb1' ,:locals => { :code => "jishuchangping"}%>
@@ -195,7 +195,9 @@
       </div>
       <div class="wrapper">
         <div class="mm links">
-          <a href="http://www.wangqi.com" target="_blank" style="width:10%">网奇</a><a href="http://www.iwms.net/" target="_blank" style="width:10%">iwms网站管理系统</a>
+          <%FriendLink.find(:all).each do |link|%>
+          <%=link_to link.name,link.url,:tager=>"_blank",:style=>"width:10%"%>
+          <%end%>
         </div>
       </div>
     </div>

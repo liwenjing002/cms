@@ -4,14 +4,7 @@
     <div class="l"></div>
     <div class="r"></div>
     <div class="m">
-      <div style="width:40%;float:left;">&nbsp; 
         <%= forum_tab @forum %>
-      </div>
-      <div style="width:60%;float:right;">
-        <script type="text/javascript">
-          bRoll.init([]);
-        </script><div id="bulletin" class="bulletin"><div id="bulletinBody"><ul></ul><br style="clear:both"><ul></ul></div></div>
-      </div>
     </div>
   </div>
 
@@ -32,7 +25,7 @@
                 <%@articles.each do |article|%>
                   <div class="summary">
                     <div class="hr"></div>
-                    <div class="diggC"><ul class="digg"><li class="digg1">0</li><li class="digg2"><a href="#" >点击数</a></li></ul></div>
+                    <div class="diggC"><ul class="digg"><li class="digg1"><%=article.read_num%></li><li class="digg2"><a href="#" >点击数</a></li></ul></div>
                     <div class="cont">
                       <div class="title"><%= link_to strip_html(article.title,64),articles_homes_path(article) ,:target=>"_blank"%></div>
                       <div class="sum"></div>
