@@ -1,3 +1,4 @@
+# encoding: utf-8
 class AddCodeToForum < ActiveRecord::Migration
   def self.up
     remove_column :articles,:second_forum_id
