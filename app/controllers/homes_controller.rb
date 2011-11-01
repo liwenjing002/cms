@@ -1,3 +1,4 @@
+# encoding: utf-8
 class HomesController < ApplicationController
    before_filter :get_head
 
