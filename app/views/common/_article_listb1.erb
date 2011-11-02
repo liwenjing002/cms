@@ -1,4 +1,4 @@
-# encoding: utf-8
+<%# encoding: utf-8 %>
 <% a = Forum.find_by_code(code).articles(:order=>"create_at desc",:limit=>"8") %>
 <div class="tl"></div>
 <div class="tr"></div>
