@@ -334,9 +334,10 @@ a.imgLink {margin:5px auto; line-height:1.8}
 .wrapper {overflow:hidden}
 .tl, .bl { float:left}
 .tr, .br { float:right}
+/*
 .ml, .l { float:left;padding-bottom:10000px;margin-bottom:-10000px}
 .mr, .r { float:right;padding-bottom:10000px;margin-bottom:-10000px}
-
+*/
 /* 新添加样式表 */
 .vldMsg {display:none;border:1px solid #ddd;background:infobackground;padding:4px;color:red}
 
