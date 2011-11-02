@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   before_filter :is_login,:configure_charsets 
 
     def configure_charsets 
-    @response.headers[¡±Content-Type¡±] = ¡°text/html; charset=utf-8¡å  
+    @response.headers["Content-Type"] = "text/html; charset=utf-8" 
     end
 	
   def redirect_back_or_default default
