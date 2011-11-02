@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 #source "http://gems.rubyforge.org"
 gem 'rails', '3.0.7'
 gem 'will_paginate',          '~> 3.0.pre2'
+gem 'aws-s3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem "simple_form",:git=>'git://github.com/plataformatec/simple_form.git'
