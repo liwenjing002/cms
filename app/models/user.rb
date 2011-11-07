@@ -1,3 +1,4 @@
+# encoding: utf-8
 class User < ActiveRecord::Base
   validates_presence_of :name,:message => "登录名不为空"
   validates_presence_of :password,:message => "密码不为空"

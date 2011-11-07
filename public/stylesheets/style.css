@@ -8,18 +8,18 @@ img {border:0;_vertical-align:middle}
 button, input.btn {background:#FFF8C5 url(/images/btnBg.gif) repeat-x 0 0;border:1px solid #B4C91A;color:#080;line-height:20px;height:20px}
 
 /*内容宽度背景等*/
-.twidth {width:965px;background:#fff;margin-right:auto;margin-left:auto;overflow-x:hidden}
+.twidth {width:965px;background:#fff; margin:0 auto;;overflow-x:hidden}
 
 /* 栏目加右margin */
 .mR {margin-right:10px}
 
 .grid {border:1px solid #ccc;border-collapse:collapse}
 .gridHead {font-size:12px;font-weight:bold;background:#ECF4FF;height:28px;text-align:center}
-.grid td {padding:3px;height:26px;*height:20px;border-color:#ccc}
+.grid td {padding:3px;height:26px;border-color: #ccc}
 
-a:link, a:visited {color:#000;text-decoration:none}
+
 a:hover {text-decoration:underline}
-
+a:link, a:visited {color:#000;text-decoration:none}
 /*列表标题样式*/
 ul.nl {list-style:none outside none; margin:0; padding:0}
 ul.nl li {line-height:22px;padding-left:15px;background:url(/images/iwms.gif) no-repeat 0 0}
@@ -106,7 +106,7 @@ ul.conInfo  li {float:left;width:50%}
 .alignCenterTop {vertical-align:top;text-align:center}
 
 /* 网站头 */
-#sitehead {overflow:hidden;_width:100%; background:url(/images/sit.gif) repeat-x bottom; height:98px; overflow:hidden; }
+#sitehead {overflow:hidden;_width:100%; background:url(/images/site.png) ; height:98px; overflow:hidden; }
 #sitehead .m{ width:965px; margin:0 auto; padding-top:5px; color:#3F3F3F;}
 #sitehead a{color:#3F3F3F;}
 #sitehead .l {display:none}
@@ -334,9 +334,10 @@ a.imgLink {margin:5px auto; line-height:1.8}
 .wrapper {overflow:hidden}
 .tl, .bl { float:left}
 .tr, .br { float:right}
+/*
 .ml, .l { float:left;padding-bottom:10000px;margin-bottom:-10000px}
 .mr, .r { float:right;padding-bottom:10000px;margin-bottom:-10000px}
-
+*/
 /* 新添加样式表 */
 .vldMsg {display:none;border:1px solid #ddd;background:infobackground;padding:4px;color:red}
 

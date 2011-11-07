@@ -61,7 +61,12 @@ class ArticlesController < ApplicationController
   # PUT /articles/1.xml
   def update
     @article = Article.find(params[:id])
-
+	if params[:picture]
+	pic =  Ckeditor::Picture.create(
+      :data  => params[:picture]
+    )
+	params[:article][:picture_id] = pic.id
+	end
     respond_to do |format|
       params[:article][:user_id]= session[:user_id]
       if @article.update_attributes(params[:article])

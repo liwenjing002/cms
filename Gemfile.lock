@@ -51,6 +51,10 @@ GEM
       activesupport (= 3.0.7)
     activesupport (3.0.7)
     arel (2.0.10)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     builder (2.1.2)
     cocaine (0.2.0)
     erubis (2.6.6)
@@ -95,12 +99,14 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (0.3.30)
     will_paginate (3.0.1)
+    xml-simple (1.1.0)
 
 PLATFORMS
   ruby
   x86-mingw32
 
 DEPENDENCIES
+  aws-s3
   ckeditor!
   mysql
   orm_adapter!

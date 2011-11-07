@@ -26,7 +26,7 @@
 
             <p>
             <label class="required">封面</label><br>
-             <%= image_tag( @article.picture.data.url(:thumb), :alt => @article.title) if @article.picture %>
+               <%= image_tag( @article.picture.url(:thumb), :alt => @article.title) if @article.picture %>
           </p>
 
           <p>

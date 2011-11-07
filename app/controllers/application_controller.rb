@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
-  before_filter :is_login
-  
+  before_filter :is_login,:configure_charsets 
+
+    def configure_charsets 
+
+    end
+	
   def redirect_back_or_default default
     if session[:return_to] &&
         session[:return_to] != "/" &&
