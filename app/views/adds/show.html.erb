@@ -1,0 +1,34 @@
+﻿<div id="page" style="height:500px">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">
+
+      <h3>查看广告</h3>
+
+
+      <fieldset>
+        <legend>查看广告</legend>
+
+        <p>
+          <label class="required" for="name">广告名称</label><br/>
+          <%= @add.name %>
+        </p>
+
+        <p>
+          <label class="required" for="name">广告链接</label><br/>
+          <%= @add.url %>
+        </p>
+                    <p>
+            <label class="required"></lab广告图片el><br>
+               <%= image_tag( @add.picture.url(:thumb), :alt => @add.name) if @add.picture %>
+          </p>
+      </fieldset>
+
+
+      <%= link_to 'Edit', edit_add_path(@add) %> |
+      <%= link_to 'Back', add_path %>
+  </div>
+  <!-- End of Wrapper -->
+</div>
+
