@@ -114,7 +114,7 @@ ul.conInfo  li {float:left;width:50%}
 
 #middle {overflow:hidden}
 #footer {text-align:center;line-height:1.5;margin:10px 0; color:#8D8D8D; padding-bottom:10px;}
-.bmenu { background:url(/images/bgre.gif) repeat-x 0 -207px;text-align:center;line-height:30px; color:#fff; margin-bottom:8px;}
+.bmenu { background:url(/images/bgre.png) repeat-x 0 -207px;text-align:center;line-height:30px; color:#fff; margin-bottom:8px;}
 .bmenu a{ color:#fff;}
 
 .height7{ height:7px; clear:both; overflow:hidden;}
@@ -122,7 +122,7 @@ ul.conInfo  li {float:left;width:50%}
 
 /* 导航条 */
 #navbar {overflow:hidden;_width:100%; display:none;}
-#navbar .m {text-align:center;line-height:30px;background:#E5F6FE url(/images/bgre.gif) repeat-x 0 -207px;}
+#navbar .m {text-align:center;line-height:30px;background:#E5F6FE url(/images/bgre.png) repeat-x 0 -207px;}
 #navbar .l {display:none}
 #navbar .r {display:none}
 #navbar a:link, #navbar a:visited {color:#FFF; font-size:14px; text-decoration:none;background:url(/images/iwms.gif) no-repeat 0 -160px; padding:0 6px 0 8px}
@@ -131,7 +131,7 @@ ul.conInfo  li {float:left;width:50%}
 
 /*新导航条 */
 #navbar1 {overflow:hidden;_width:100%; }
-#navbar1 .m {text-align:center;line-height:30px;background:url(/images/bgre.gif) repeat-x 0 -207px; border-bottom:4px solid #BCBCBC;}
+#navbar1 .m {text-align:center;line-height:30px;background:url(/images/bgre.png) repeat-x 0 -207px; border-bottom:4px solid #BCBCBC;}
 #navbar1 .l {display:none}
 #navbar1 .r {display:none}
 #navbar1 a:link, #navbar1 a:visited {color:#FFF; font-size:14px; text-decoration:none;background:url(/images/iwms.gif) no-repeat 0 -160px; padding:0 20px 0 22px}
@@ -188,11 +188,11 @@ div.bulletin {line-height:25px;height:25px;overflow:hidden}
 
 /* 主栏目 */
 .mframe {margin-bottom:7px;border:1px solid #CACACA}
-.mframe .tm {height:28px;line-height:28px;background:url(/images/bgre.gif) repeat-x 0 -99px; overflow:hidden;}
-.mframe .tl {background:url(/images/bgre.gif) repeat-x 0 -127px; width:11px; height:28px;_margin-right:-3px}
+.mframe .tm {height:28px;line-height:28px;background:url(/images/bgre.png) repeat-x 0 -99px; overflow:hidden;}
+.mframe .tl {background:url(/images/bgre.png) repeat-x 0 -127px; width:11px; height:28px;_margin-right:-3px}
 .mframe .tr {display:none}
 .mframe span.tt {font-size:14px;color:#000;padding-left:10px}
-.mframe span.tt1 {font-size:14px;color:#000; background:url(/images/bgre.gif) no-repeat 0 -162px; padding-left:15px; }
+.mframe span.tt1 {font-size:14px;color:#000; background:url(/images/bgre.png) no-repeat 0 -162px; padding-left:15px; }
 .mframe .mm {background:#fff;padding:3px;border-top:1px solid #CACACA;overflow:hidden}
 .mframe .ml {display:none}
 .mframe .mr {display:none}
@@ -206,8 +206,8 @@ div.bulletin {line-height:25px;height:25px;overflow:hidden}
 
 /*后台控制样式*/
 .lf {margin-bottom:7px;border:1px solid #CACACA}
-.lf .tm {height:28px;line-height:28px;background:url(/images/bgre.gif) repeat-x 0 -99px; overflow:hidden}
-.lf .tl {background:url(/images/bgre.gif) repeat-x 0 -127px; width:11px; height:28px;_margin-right:-3px}
+.lf .tm {height:28px;line-height:28px;background:url(/images/bgre.png) repeat-x 0 -99px; overflow:hidden}
+.lf .tl {background:url(/images/bgre.png) repeat-x 0 -127px; width:11px; height:28px;_margin-right:-3px}
 .lf .tr {display:none}
 .lf span.tt {font-size:14px;color:#fff; background:url(/images/bgno.gif) no-repeat 0 -36px; display:block; width:80px; height:29px; padding-left:25px; margin-top:-1px; margin-left:-1px; overflow:hidden}
 .lf .mm {background:#fff;padding:3px;border-top:1px solid #CACACA;overflow:hidden}
@@ -222,7 +222,7 @@ div.bulletin {line-height:25px;height:25px;overflow:hidden}
 .lframe .tm {height:26px;line-height:26px;background:none;}
 .lframe .tl {display:none}
 .lframe .tr {display:none}
-.lframe span.tt {font-size:14px;color:#000; background:url(/images/bgre.gif) no-repeat 0 -162px; padding-left:15px; }
+.lframe span.tt {font-size:14px;color:#000; background:url(/images/bgre.png) no-repeat 0 -162px; padding-left:15px; }
 .lframe span.tt1 {font-size:14px;color:#000; background:url(/images/bgno.gif) no-repeat 3px -107px; padding-left:25px; }
 .lframe span.tt2 {font-size:14px;color:#000; background:url(/images/bgno.gif) no-repeat 3px -131px; padding-left:25px; }
 .lframe .mm {padding:5px 3px;border:1px solid #D5D5D5; background:#fff;overflow:hidden}
@@ -234,9 +234,9 @@ div.bulletin {line-height:25px;height:25px;overflow:hidden}
 
 /*头条和图片栏目*/
 .mf {margin-bottom:7px}
-.mf .tm {height:33px;line-height:33px;background:url(/images/bgre.gif) repeat-x 0 -66px;}
-.mf .tl {background:url(/images/bgre.gif) repeat-x 0 0; width:11px; height:33px;_margin-right:-3px}
-.mf .tr {background:url(/images/bgre.gif) repeat-x 0 -33px; width:11px; height:33px;_margin-left:-3px}
+.mf .tm {height:33px;line-height:33px;background:url(/images/bgre.png) repeat-x 0 -66px;}
+.mf .tl {background:url(/images/bgre.png) repeat-x 0 0; width:11px; height:33px;_margin-right:-3px}
+.mf .tr {background:url(/images/bgre.png) repeat-x 0 -33px; width:11px; height:33px;_margin-left:-3px}
 .mf span.tt1 {background:url(/images/bgno.gif) no-repeat 0 -65px; width:123px; height:36px; margin-left:10px;display:block;}
 .mf span.tt2 {background:url(/images/bgno.gif) no-repeat 0 0; width:160px; height:36px; margin-top:-3px; margin-left:10px;display:block;}
 .mf .mm {background:#fff;padding:9px 3px;border:1px solid #C5C5CF;border-top:0;overflow:hidden}
