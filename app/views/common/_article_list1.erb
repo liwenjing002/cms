@@ -25,7 +25,7 @@
     <div class="height0"></div>
     <ul class="nl">
       <%if @articles and @articles.length >1%>
-        <%for i in 1 .. @articles.length%>
+        <%for i in 1 .. @articles.length-1%>
           <li><%=link_to @articles[i].title,articles_homes_path(@articles[i]),:tager=>"_blank"%></li>
         <%end%>
       <%end%>
