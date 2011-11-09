@@ -1,4 +1,6 @@
 Huanhao::Application.routes.draw do
+  resources :adds
+
   resources :friend_links
 
 match '/', :to => 'homes#index'

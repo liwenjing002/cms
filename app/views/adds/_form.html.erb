@@ -1,0 +1,43 @@
+﻿<div id="page" style="height:500px">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">
+
+      <h3>新增/编辑广告</h3>
+      <% if @add.errors.any? %>
+        <% @add.errors.full_messages.each do |msg| %>
+          <div class="box box-info"><%=msg%></div>
+        <% end %>
+      <%end%>
+
+      <%= simple_form_for @add,:html=>{:multipart=>true} do |f| %>
+        <fieldset>
+          <legend>新增/编辑广告</legend>
+
+          <p>
+            <label class="required" for="name">广告名称</label><br/>
+            <%= f.text_field :name,:class=>"half" %>
+          </p>
+
+          <p>
+            <label class="required" for="name">广告图片</label><br/>
+            <input type="file"  name ="picture"/>
+          </p>
+           <p>
+            <label class="required" for="name">广告链接</label><br/>
+            <%= f.text_field :url,:class=>"half" %>
+          </p>
+          <p class="box"><input type="submit" class="btn btn-green big" value="提交"/>
+            or
+            <input type="reset" class="btn" value="重置"/></p>
+
+        </fieldset>
+
+      <%end%>
+      <%= link_to 'Show', @add %> |
+      <%= link_to 'Back', friend_links_path %>
+  </div>
+
+  <!-- End of Wrapper -->
+</div>

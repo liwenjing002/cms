@@ -114,7 +114,7 @@ ul.conInfo  li {float:left;width:50%}
 
 #middle {overflow:hidden}
 #footer {text-align:center;line-height:1.5;margin:10px 0; color:#8D8D8D; padding-bottom:10px;}
-.bmenu { background:url(/images/bgre.gif) repeat-x 0 -207px;text-align:center;line-height:30px; color:#fff; margin-bottom:8px;}
+.bmenu { background:url(/images/bgre.giff) repeat-x 0 -207px;text-align:center;line-height:30px; color:#fff; margin-bottom:8px;}
 .bmenu a{ color:#fff;}
 
 .height7{ height:7px; clear:both; overflow:hidden;}
@@ -125,7 +125,7 @@ ul.conInfo  li {float:left;width:50%}
 #navbar .m {text-align:center;line-height:30px;background:#E5F6FE url(/images/bgre.gif) repeat-x 0 -207px;}
 #navbar .l {display:none}
 #navbar .r {display:none}
-#navbar a:link, #navbar a:visited {color:#FFF; font-size:14px; text-decoration:none;background:url(/images/iwms.gif) no-repeat 0 -160px; padding:0 6px 0 8px}
+#navbar a:link, #navbar a:visited color:#FFF; font-size:14px; text-decoration:none;background:url(/images/iwms.gif) no-repeat 0 -160px; padding:0 6px 0 8px}
 #navbar a:hover {}
 #navbar a.first {background:none!important}
 
