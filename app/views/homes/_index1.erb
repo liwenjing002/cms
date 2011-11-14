@@ -177,6 +177,7 @@
             <div class="lframe">
               <%= render :partial => 'common/article_listc1' ,:locals => { :code => "gongbao"}%>
             </div>
+            <!--
             <div class="lframe">
               <div class="tm">
                 <span class="tt2">网站调查</span>
@@ -186,7 +187,7 @@
                   <form action="pollView.aspx" method="post" target="DvnPoll"><div style="padding:5px;"><div><b>你从何处获知本站的？</b></div><div style="padding:6px 0"><input type="hidden" name="id" value="1"><input type="radio" value="0" name="item">电视媒体报道<br><input type="radio" value="1" name="item">互联网 搜索<br><input type="radio" value="2" name="item">报纸 杂志<br><input type="radio" value="3" name="item">与朋友的谈话<br><input type="radio" value="4" name="item">其他方式<br></div><div align="center"><button type="submit" class="pollSubmit">投票</button>&nbsp; &nbsp;<button type="button" class="pollView" onclick="ViewPoll(1)">查看</button></div></div></form>
                 </div>
               </div>
-            </div>
+            </div> -->
           </td>
         </tr>
       </tbody></table>
@@ -197,7 +198,7 @@
       <div class="wrapper">
         <div class="mm links">
           <%FriendLink.find(:all).each do |link|%>
-          <%=link_to link.name,link.url,:tager=>"_blank",:style=>"width:10%"%>
+          <%=link_to link.name,link.url,:target=>"_blank",:style=>"width:10%"%>
           <%end%>
         </div>
       </div>

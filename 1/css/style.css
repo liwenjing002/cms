@@ -2336,3 +2336,6 @@ div#nyroModalFull div#nyroModalWrapper div#nyroModalContent a.nyroModalNext {
 div#nyroModalFull div#nyroModalWrapper div#nyroModalContent a.nyroModalNext:hover {
 	background-image: url(../img/nyro/next.gif);
 }
+a :hover {
+  background-color:#FF0000;
+ }
