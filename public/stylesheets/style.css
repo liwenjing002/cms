@@ -511,3 +511,12 @@ ul.pl li img {_margin:6px 0}
 .popAdm a {display:block;color:#666;line-height:20px;font-size:12px}
 .popFix a {display:block;color:#666;line-height:20px;font-size:12px;padding-left:20px;background:transparent url(/images/post.gif) no-repeat left -700px}
 .popFix a.psChk {background-position:left -650px}
+ a:hover {
+  color:green;
+ }
+ 
+
+.infolist{matgin:0;}
+.infolist ul{margin:0;padding:0;}
+.infolist ul li{list-style:none;height:26px;line-height:26px;}
+.infocontent{height:241px;overflow:hidden;}
