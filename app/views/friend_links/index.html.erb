@@ -28,9 +28,9 @@
               <tr class="gradeA odd">
                 <td><%= friend_link.name %></td>
                 <td><%= friend_link.url %></td>
-                <td><%= link_to 'Show', friend_link %></td>
-                <td><%= link_to 'Edit', edit_friend_link_path(friend_link) %></td>
-                <td><%= link_to 'Destroy', friend_link, :confirm => 'Are you sure?', :method => :delete %></td>
+                <td><%= link_to '查看', friend_link %></td>
+                <td><%= link_to '编辑', edit_friend_link_path(friend_link) %></td>
+                <td><%= link_to '删除', friend_link, :confirm => 'Are you sure?', :method => :delete %></td>
               </tr>
             <%end%>
           </tbody>

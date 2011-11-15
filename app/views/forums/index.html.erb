@@ -31,8 +31,8 @@
                 <td><%= forum.order_num %></td>
                 <td><%= forum.name %></td>
                 <td><%if forum.father%><%=forum.father.name%><%end%></td>
-                <td><%= link_to 'Show', forum %></td>
-                <td><%= link_to 'Edit', edit_forum_path(forum) %></td>
+                <td><%= link_to '查看', forum %></td>
+                <td><%= link_to '编辑', edit_forum_path(forum) %></td>
 
                 <td>
                   <%if forum.order_num and forum.order_num > 9%><%= link_to 'Destroy', forum, :confirm => 'Are you sure?', :method => :delete %>

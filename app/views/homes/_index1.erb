@@ -175,19 +175,35 @@
             </div>
 
             <div class="lframe">
-              <%= render :partial => 'common/article_listc1' ,:locals => { :code => "gongbao"}%>
-            </div>
-            <!--
-            <div class="lframe">
-              <div class="tm">
-                <span class="tt2">网站调查</span>
-              </div>
-              <div class="wrapper">
-                <div class="mm" style="padding:9px;">
-                  <form action="pollView.aspx" method="post" target="DvnPoll"><div style="padding:5px;"><div><b>你从何处获知本站的？</b></div><div style="padding:6px 0"><input type="hidden" name="id" value="1"><input type="radio" value="0" name="item">电视媒体报道<br><input type="radio" value="1" name="item">互联网 搜索<br><input type="radio" value="2" name="item">报纸 杂志<br><input type="radio" value="3" name="item">与朋友的谈话<br><input type="radio" value="4" name="item">其他方式<br></div><div align="center"><button type="submit" class="pollSubmit">投票</button>&nbsp; &nbsp;<button type="button" class="pollView" onclick="ViewPoll(1)">查看</button></div></div></form>
-                </div>
-              </div>
-            </div> -->
+              <%#= render :partial => 'common/article_listc1' ,:locals => { :code => "gongbao"}%>
+
+				<div class="tl"></div>
+				<div class="tr"></div>
+				<div class="tm"><div class="moreR"> </div>
+				  <span class="tt1">联系我们</span>
+				</div>
+				<div class="wrapper">
+				  <div class="ml"></div>
+				  <div class="mr"></div>
+				  <div class="mm" style="height:218px; overflow:hidden;">
+					  <div class='infolist'> 
+					  <ul style='font-size: 14px;'>
+                          <li class="li2"  ><span >地址:杭州市德胜路218号</span></li>
+						  <li class="li2"  ><span>电话:0571-86079175、88836773</span></li>
+						  <li class="li2"  ><span>传真:0571-86079175</span></li>
+						  <li class="li2"  ><span>邮箱:</span><span>cyxh2011@126.com</span></li>
+						 </ul>
+					  </div>
+
+
+
+				  </div>
+				</div>
+				<div class="bl"></div>
+				<div class="br"></div>
+				<div class="bm"></div>
+							</div>
+            
           </td>
         </tr>
       </tbody></table>
@@ -204,5 +220,5 @@
       </div>
     </div>
   </div>
-  <div id="login" class="conInfo" style="display:none;"><form id="loginForm" method="post" action="login.aspx" style="padding:5px 0"><ul style="list-style:none;margin:0;padding:0;text-align:center;"><li><input type="text" class="inputbg" name="memberName" size="15" maxlength="50" onblur="iwms.logBlur(this)" onfocus="iwms.logFocus(this)" value="用户名" style="color:#999"> <select name="keepLogin" style="width:60px"><option value="">不保留</option><option value="day">一天</option><option value="week">一周</option><option value="month">一月</option><option value="year">一年</option></select></li><li style="padding:10px 0"><input type="text" class="inputbg" value="密码" name="hdPass" size="15" style="color:#999" onfocus="iwms.logFocus(this)"><input type="password" class="inputbg" style="display:none" name="memberPass" size="15" maxlength="50" onblur="iwms.logBlur(this)">&nbsp;<button type="submit" onclick="return iwms.logChk(this);" style="width:60px">登 录</button></li><li><a href="memberreg.aspx">注册</a>　<a href="memberactive.aspx">激活</a>　<a href="memberLostpass.aspx">忘记密码</a></li></ul></form></div>
+
 </div>

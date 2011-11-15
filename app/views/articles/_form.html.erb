@@ -38,8 +38,8 @@
 
           <p>
             <label for="productdesc">正文</label><br/>
-            <%= f.input :context,:as => :ckeditor,:input_html => { :toolbar => 'Full' ,:language=>"zh-cn"} %>
-			<%#= f.ckeditor :context, :label => false, :input_html => { :toolbar => 'Full' ,:language=>"zh-cn"} %>
+            <%= f.cktext_area   :context,:input_html => { :toolbar => 'Full' },:language=>"zh-cn"%>
+		
 
           </p>
 		  
@@ -73,8 +73,8 @@
 
   </div>
 
-  <%= link_to 'Show', @article %> |
-  <%= link_to 'Back', articles_path %>
+  <%= link_to '显示', @article %> |
+  <%= link_to '返回', articles_path %>
 </div>
 
 

@@ -27,9 +27,9 @@
             <tr class="gradeA odd">
               <td><%= user.name %></td>
               <td><%=user.email%></td>
-              <td><%= link_to 'Show', user %></td>
-              <td><%= link_to 'Edit', edit_user_path(user) %></td>
-              <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+              <td><%= link_to '查看', user %></td>
+              <td><%= link_to '编辑', edit_user_path(user) %></td>
+              <td><%= link_to '删除', user, :confirm => 'Are you sure?', :method => :delete %></td>
             </tr>
           <%end%>
           </tbody>
