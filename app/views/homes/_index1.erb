@@ -114,7 +114,7 @@
 
                       <%@tupianxinwen.each do |xinwen|%>
                         <li style="width:20%">
-                          <%=link_to image_tag(xinwen.picture.data.url(:content),:width=>"120",:height=>"90")+xinwen.title,articles_homes_path(xinwen)%>
+                          <%=link_to image_tag(xinwen.picture ? xinwen.picture.data.url(:content) : "/images/missing.png",:width=>"120",:height=>"90")+xinwen.title,articles_homes_path(xinwen)%>
                         </li>
                       <%end%>
                     </ul>
@@ -134,12 +134,7 @@
                 <div class="mm">
                   <div class="imgList">
                     <ul>
-                      <% @tupianxinwen = Forum.find_by_code("tupianxinwen").articles(:order=>"create_at desc",:limit=>"5") %>
-                      <%@tupianxinwen.each do |xinwen|%>
-                        <li style="width:20%">
-                          <%=link_to image_tag(xinwen.picture.data.url(:content),:width=>"120",:height=>"90")+xinwen.title,xinwen%>
-                        </li>
-                      <%end%>
+
                     </ul>
                   </div>
                 </div>
