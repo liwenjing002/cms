@@ -28,7 +28,7 @@
 <%#*<td width="300">%>
 <%#if @toutiao_xinwen and @toutiao_xinwen.length >0%>
 <%#*<div id="slImg" style="width:293px;height:180px">%>
-<%#=link_to image_tag(@toutiao_xinwen[0].picture ? @toutiao_xinwen[0].picture.data.url(:thumb) : "/images/missing.png",:width=>"293",:height=>"180"),articles_homes_path(@toutiao_xinwen[0])%>
+<%#=link_to image_tag(@toutiao_xinwen[0].picture ? @toutiao_xinwen[0].picture.data.url(:content) : "/images/missing.png",:width=>"293",:height=>"180"),articles_homes_path(@toutiao_xinwen[0])%>
 <%#*</div>%>
 <%#*<div id="slTitle" style="width:293px">%>
 <%#*<div id="slLink">%>
