@@ -44,7 +44,7 @@
                              <%if @toutiao_xinwen.length >0 %>
                             <%for i in 0..@toutiao_xinwen.length-1 %>
                               <%if i < 3%>
-                                a[<%=i%>] = ['<%=@toutiao_xinwen[i].title%>','<%=articles_homes_path(@toutiao_xinwen[i])%>','<%=@toutiao_xinwen[i].picture ? @toutiao_xinwen[i].picture.data.url(:thumb) : "/images/missing.png"%>']
+                                a[<%=i%>] = ['<%=@toutiao_xinwen[i].title%>','<%=articles_homes_path(@toutiao_xinwen[i])%>','<%=@toutiao_xinwen[i].picture ? @toutiao_xinwen[i].picture.data.url(:content) : "/images/missing.png"%>']
                                <%end%>
                            <%end%>
                              <%end%>
