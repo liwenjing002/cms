@@ -28,7 +28,7 @@
 <%#*<td width="300">%>
 <%#if @toutiao_xinwen and @toutiao_xinwen.length >0%>
 <%#*<div id="slImg" style="width:293px;height:180px">%>
-<%#=link_to image_tag(@toutiao_xinwen[0].picture ? @toutiao_xinwen[0].picture.data.url(:content) : "/images/missing.png",:width=>"293",:height=>"180"),articles_homes_path(@toutiao_xinwen[0])%>
+<%#=link_to image_tag(@toutiao_xinwen[0].picture ? @toutiao_xinwen[0].picture.data.url(:thumb) : "/images/missing.png",:width=>"293",:height=>"180"),articles_homes_path(@toutiao_xinwen[0])%>
 <%#*</div>%>
 <%#*<div id="slTitle" style="width:293px">%>
 <%#*<div id="slLink">%>
@@ -44,7 +44,7 @@
                              <%if @toutiao_xinwen.length >0 %>
                             <%for i in 0..@toutiao_xinwen.length-1 %>
                               <%if i < 3%>
-                                a[<%=i%>] = ['<%=@toutiao_xinwen[i].title%>','<%=articles_homes_path(@toutiao_xinwen[i])%>','<%=@toutiao_xinwen[i].picture ? @toutiao_xinwen[i].picture.data.url(:content) : "/images/missing.png"%>']
+                                a[<%=i%>] = ['<%=@toutiao_xinwen[i].title%>','<%=articles_homes_path(@toutiao_xinwen[i])%>','<%=@toutiao_xinwen[i].picture ? @toutiao_xinwen[i].picture.data.url(:thumb) : "/images/missing.png"%>']
                                <%end%>
                            <%end%>
                              <%end%>
@@ -114,7 +114,7 @@
 
                       <%@tupianxinwen.each do |xinwen|%>
                         <li style="width:20%">
-                          <%=link_to image_tag(xinwen.picture ? xinwen.picture.data.url(:content) : "/images/missing.png",:width=>"120",:height=>"90")+xinwen.title,articles_homes_path(xinwen)%>
+                          <%=link_to image_tag(xinwen.picture ? xinwen.picture.data.url(:thumb) : "/images/missing.png",:width=>"120",:height=>"90")+xinwen.title,articles_homes_path(xinwen)%>
                         </li>
                       <%end%>
                     </ul>
