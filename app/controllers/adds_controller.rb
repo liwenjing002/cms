@@ -1,3 +1,4 @@
+# encoding: utf-8
 class AddsController < ApplicationController
   # GET /adds
   # GET /adds.xml

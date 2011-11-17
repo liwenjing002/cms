@@ -11,56 +11,56 @@
   <div class="mm" style="height:218px; overflow:hidden;">
 
 
-    <%if code =='tongzhi'&& a.length >9%>
+    <%if a.length >9%>
     
     <script type="text/javascript">
  
 var interval=1000;//两次滚动之间的时间间隔
 var stepsize=26;//滚动一次的长度，必须是行高的倍数,这样滚动的时候才不会断行
 var scrollspeed="normal";//可选("slow", "normal", or "fast")，或者滚动动画时长的毫秒数
-var objInterval=null;
+var objInterval<%=code%>=null;
  
 $(document).ready( 
 function(){
 //用上部的内容填充下部
-$("#bottom").html($("#top").html());
+$("#bottom<%=code%>").html($("#top<%=code%>").html());
  
 //给显示的区域绑定鼠标事件
-$("#content2").bind("mouseover",function(){StopScroll();});
-$("#content2").bind("mouseout",function(){StartScroll();});
+$("#<%=code%>").bind("mouseover",function(){StopScroll<%=code%>();});
+$("#<%=code%>").bind("mouseout",function(){StartScroll<%=code%>();});
  
 //启动定时器
-StartScroll();
+StartScroll<%=code%>();
 } 
 ); 
  
 //启动定时器，开始滚动
-function StartScroll(){
- objInterval=setInterval("verticalloop()",interval);
+function StartScroll<%=code%>(){
+ objInterval<%=code%>=setInterval("verticalloop<%=code%>()",interval);
 }
  
 //清除定时器，停止滚动
-function StopScroll(){
- window.clearInterval(objInterval);
+function StopScroll<%=code%>(){
+ window.clearInterval(objInterval<%=code%>);
 }
  
 //控制滚动
-function verticalloop(){
+function verticalloop<%=code%>(){
 //判断是否上部内容全部移出显示区域
 //如果是，从新开始;否则，继续向上移动
-if($("#content2").scrollTop()>=$("#top").outerHeight()){
-      $("#content2").scrollTop($("#content2").scrollTop()-$("#top").outerHeight());
+if($("#<%=code%>").scrollTop()>=$("#top<%=code%>").outerHeight()){
+      $("#<%=code%>").scrollTop($("#<%=code%>").scrollTop()-$("#top<%=code%>").outerHeight());
 }
 //使用jquery创建滚动时的动画效果
-$("#content2").animate({"scrollTop" : $("#content2").scrollTop()+stepsize +"px"},scrollspeed,function(){
+$("#<%=code%>").animate({"scrollTop" : $("#<%=code%>").scrollTop()+stepsize +"px"},scrollspeed,function(){
  //这里用于显示滚动区域的scrollTop，实际应用中请删除
 
 });
 }
 </script>
     
-      <div id="content2" class="infocontent"> 
-        <div id="top" class="infolist">
+      <div id="<%=code%>" class="infocontent"> 
+        <div id="top<%=code%>" class="infolist">
           <ul>
             <%a.each do |article|%>
               <li>
@@ -70,7 +70,7 @@ $("#content2").animate({"scrollTop" : $("#content2").scrollTop()+stepsize +"px"}
             <%end%>
           </ul>
         </div>
-        <div id="bottom" class="infolist"></div> 
+        <div id="bottom<%=code%>" class="infolist"></div> 
       </div>
 
     <%else%>
