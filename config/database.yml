@@ -11,15 +11,15 @@ development:
 test:
       host: localhost
       adapter: mysql
-      database: huanbao
+      database: huanbaodev
       port: 3306
-      username: root
-      password: 
+      username: huanbaodev
+      password: lwj1988@A
 
 production:
-      host: localhost
+      host: huanbaodev.db.8583482.hostedresource.com
       adapter: mysql
-      database: huanbao
+      database: huanbaodev
       port: 3306
-      username: root
-      password: 
+      username: huanbaodev
+      password: lwj1988@A
