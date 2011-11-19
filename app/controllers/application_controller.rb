@@ -5,6 +5,9 @@ class ApplicationController < ActionController::Base
 
     end
 	
+    
+    
+    
   def redirect_back_or_default default
     if session[:return_to] &&
         session[:return_to] != "/" &&
@@ -31,4 +34,5 @@ class ApplicationController < ActionController::Base
       redirect_to "/users/login"
     end
   end
+  
 end

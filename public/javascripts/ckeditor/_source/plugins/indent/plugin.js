@@ -15,9 +15,6 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 
 	function onSelectionChange( evt )
 	{
-		if ( evt.editor.readOnly )
-			return null;
-
 		var editor = evt.editor,
 			elementPath = evt.data.path,
 			list = elementPath && elementPath.contains( listNodeNames ),
@@ -80,7 +77,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 
 	function isListItem( node )
 	{
-		return node.type == CKEDITOR.NODE_ELEMENT && node.is( 'li' );
+		return node.type = CKEDITOR.NODE_ELEMENT && node.is( 'li' );
 	}
 
 	indentCommand.prototype = {

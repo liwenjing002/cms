@@ -14,7 +14,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
 /**
- * Contains the dictionary of language entries.
+ * Constains the dictionary of language entries.
  * @namespace
  */
 CKEDITOR.lang['sk'] =
@@ -34,8 +34,8 @@ CKEDITOR.lang['sk'] =
 	editorTitle : 'Rich text editor, %1, stlačte ALT 0 pre nápovedu.',
 
 	// ARIA descriptions.
-	toolbars	: 'Editor toolbars', // MISSING
-	editor		: 'Rich Text Editor', // MISSING
+	toolbar	: 'Toolbar', // MISSING
+	editor	: 'Rich Text Editor', // MISSING
 
 	// Toolbar buttons without dialogs.
 	source			: 'Zdroj',
@@ -121,10 +121,6 @@ CKEDITOR.lang['sk'] =
 		alignBottom		: 'Dole',
 		invalidHeight	: 'Výška musí byť číslo.',
 		invalidWidth	: 'Šírka musí byť číslo.',
-		invalidCssLength	: 'Value specified for the "%1" field must be a positive number with or without a valid CSS measurement unit (px, %, in, cm, mm, em, ex, pt, or pc).', // MISSING
-		invalidHtmlLength	: 'Value specified for the "%1" field must be a positive number with or without a valid HTML measurement unit (px or %).', // MISSING
-		invalidInlineStyle	: 'Value specified for the inline style must consist of one or more tuples with the format of "name : value", separated by semi-colons.', // MISSING
-		cssLengthTooltip	: 'Enter a number for a value in pixels or a number with a valid CSS unit (px, %, in, cm, mm, em, ex, pt, or pc).', // MISSING
 
 		// Put the voice-only part of the label in the span.
 		unavailable		: '%1<span class="cke_accessibility">, unavailable</span>' // MISSING
@@ -205,8 +201,7 @@ CKEDITOR.lang['sk'] =
 		menu		: 'Vlastnosti kotvy',
 		title		: 'Vlastnosti kotvy',
 		name		: 'Meno kotvy',
-		errorName	: 'Zadajte prosím meno kotvy',
-		remove		: 'Remove Anchor' // MISSING
+		errorName	: 'Zadajte prosím meno kotvy'
 	},
 
 	// List style dialog
@@ -242,7 +237,6 @@ CKEDITOR.lang['sk'] =
 		findWhat			: 'Čo hľadať:',
 		replaceWith			: 'Čím nahradiť:',
 		notFoundMsg			: 'Hľadaný text nebol nájdený.',
-		findOptions			: 'Find Options', // MISSING
 		matchCase			: 'Rozlišovať malé/veľké písmená',
 		matchWord			: 'Len celé slová',
 		matchCyclic			: 'Match cyclic', // MISSING
@@ -419,6 +413,7 @@ CKEDITOR.lang['sk'] =
 		upload		: 'Odoslať',
 		alt			: 'Alternatívny text',
 		lockRatio	: 'Zámok',
+		unlockRatio	: 'Unlock Ratio', // MISSING
 		resetSize	: 'Pôvodná veľkosť',
 		border		: 'Okraje',
 		hSpace		: 'H-medzera',
@@ -720,8 +715,6 @@ CKEDITOR.lang['sk'] =
 	{
 		title		: 'About CKEditor', // MISSING
 		dlgTitle	: 'About CKEditor', // MISSING
-		help	: 'Check $1 for help.', // MISSING
-		userGuide : 'CKEditor User\'s Guide', // MISSING
 		moreInfo	: 'For licensing information please visit our web site:', // MISSING
 		copy		: 'Copyright &copy; $1. All rights reserved.' // MISSING
 	},
@@ -752,64 +745,9 @@ CKEDITOR.lang['sk'] =
 	toolbarCollapse	: 'Collapse Toolbar', // MISSING
 	toolbarExpand	: 'Expand Toolbar', // MISSING
 
-	toolbarGroups :
-	{
-		document : 'Document', // MISSING
-		clipboard : 'Clipboard/Undo', // MISSING
-		editing : 'Editing', // MISSING
-		forms : 'Forms', // MISSING
-		basicstyles : 'Basic Styles', // MISSING
-		paragraph : 'Paragraph', // MISSING
-		links : 'Links', // MISSING
-		insert : 'Insert', // MISSING
-		styles : 'Styles', // MISSING
-		colors : 'Colors', // MISSING
-		tools : 'Tools' // MISSING
-	},
-
 	bidi :
 	{
 		ltr : 'Text direction from left to right', // MISSING
 		rtl : 'Text direction from right to left' // MISSING
-	},
-
-	docprops :
-	{
-		label : 'Vlastnosti dokumentu',
-		title : 'Vlastnosti dokumentu',
-		design : 'Design', // MISSING
-		meta : 'Meta Data',
-		chooseColor : 'Choose', // MISSING
-		other : '<iný>',
-		docTitle :	'Titulok',
-		charset : 	'Kódová stránka',
-		charsetOther : 'Iná kódová stránka',
-		charsetASCII : 'ASCII', // MISSING
-		charsetCE : 'Stredoeurópske',
-		charsetCT : 'Čínština tradičná (Big5)',
-		charsetCR : 'Cyrillika',
-		charsetGR : 'Gréčtina',
-		charsetJP : 'Japončina',
-		charsetKR : 'Korejčina',
-		charsetTR : 'Turečtina',
-		charsetUN : 'Unicode (UTF-8)', // MISSING
-		charsetWE : 'Západná európa',
-		docType : 'Typ záhlavia dokumentu',
-		docTypeOther : 'Iný typ záhlavia dokumentu',
-		xhtmlDec : 'Obsahuje deklarácie XHTML',
-		bgColor : 'Farba pozadia',
-		bgImage : 'URL adresa obrázku na pozadí',
-		bgFixed : 'Fixné pozadie',
-		txtColor : 'Farba textu',
-		margin : 'Okraje stránky',
-		marginTop : 'Horný',
-		marginLeft : 'Ľavý',
-		marginRight : 'Pravý',
-		marginBottom : 'Dolný',
-		metaKeywords : 'Kľúčové slová pre indexovanie (oddelené čiarkou)',
-		metaDescription : 'Popis stránky',
-		metaAuthor : 'Autor',
-		metaCopyright : 'Autorské práva',
-		previewHtml : '<p>This is some <strong>sample text</strong>. You are using <a href="javascript:void(0)">CKEditor</a>.</p>' // MISSING
 	}
 };
