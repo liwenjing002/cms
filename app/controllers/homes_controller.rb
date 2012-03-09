@@ -11,7 +11,7 @@ class HomesController < ApplicationController
   end
 
   def get_head
-    @forum_first = Forum.find(:all,:conditions=>["father_id is null and order_num > 0 and order_num <10"])
+    @forum_first = Forum.find(:all,:conditions=>["father_id is null and order_num > 0 and order_num <11"])
   end
 
   def forums
