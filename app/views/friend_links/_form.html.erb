@@ -26,13 +26,13 @@
           </p>
           <p class="box"><input type="submit" class="btn btn-green big" value="提交"/>
             or
-            <input type="reset" class="btn" value="重置"/></p>
+            <input type="reset" class="btn" value="重置"/>
+  <%= link_to '返回', friend_links_path,:class=>"btn btn-green big" ,:style=>"vertical-align: middle;margin-bottom: 0;"%>
+          </p>
 
         </fieldset>
 
       <%end%>
-      <%= link_to '查看', @friend_link %> |
-      <%= link_to '返回', friend_links_path %>
   </div>
 
   <!-- End of Wrapper -->

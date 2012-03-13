@@ -1,70 +1,89 @@
-
-    <!-- Header -->
-    <header id="top">
-      <div class="wrapper-login">
-        <!-- Title/Logo - can use text instead of image -->
-        <div id="title"><img SRC="/images/logo.png" alt="Administry" /><!--<span>Administry</span> demo--></div>
-        <!-- Main navigation -->
-        <nav id="menu">
-          <ul class="sf-menu">
-            <li class="current"><a href="#">登录</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <div id="pagetitle">
-      <div class="wrapper-login"></div>
+<header id="top">
+    <div class="wrapper-login">
+      <!-- Title/Logo - can use text instead of image -->
+      <div id="title"> <img SRC="/images/logo.png" alt="Administry" />    <!--<span>Administry</span> demo--></div>
+      <!-- Main navigation -->
+       <nav id="menu">
+        <ul class="sf-menu">
+          <li class="current">
+            <a href="#">登录</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- End of Main navigation -->
+      <!-- Aside links -->
+      <aside><b></b> &middot; <a href="#"></a> &middot; <a href="#"></a></aside>
+      <!-- End of Aside links -->
     </div>
-    <div id="page">
-      <!-- Wrapper -->
-      <div class="wrapper-login">
+  </header>
+  <!-- End of Header -->
+  <!-- Page title -->
+  <div id="pagetitle">
+    <div class="wrapper-login"></div>
+  </div>
+  <!-- End of Page title -->
+  
+  <!-- Page content -->
+  <div id="page">
+    <!-- Wrapper -->
+    <div class="wrapper-login">
         <!-- Login form -->
-        <section class="full">					
+        <section class="full">          
+          
+         <h3>登录杭州环保协会后台</h3>
+        <%if @error_msg%>
+          <div class="box box-info"> <%=@error_msg%></div>
+        <%end%>
+              <form id="loginform" method="POST" action="login.html">
 
-          <h3>登录杭州环保协会后台</h3>
-          <%if @error_msg%>
-          <div class="box box-info"><%=@error_msg%></div>
-          <%end%>
-          <form id="loginform" method="POST" action="login.html">
+                <p>
+                  <label class="required" for="username">用户名:</label>
+                  <br/>    
+                  <input type="text" id="username" class="full" value="" name="user[name]"/>    
+                </p>
 
-            <p>
-              <label class="required" for="username">用户名:</label><br/>
-              <input type="text" id="username" class="full" value="" name="user[name]"/>
-            </p>
+                <p>
+                  <label class="required" for="password">密码:</label>
+                  <br/>    
+                  <input type="password" id="password" class="full" value="" name="user[password]"/>    
+                </p>
 
-            <p>
-              <label class="required" for="password">密码:</label><br/>
-              <input type="password" id="password" class="full" value="" name="user[password]"/>
-            </p>
-
-            <p>
-              <input type="submit" class="btn btn-green big" value="登录"/> &nbsp; <a href="javascript: //;" onClick="$('#emailform').slideDown(); return false;">Forgot password?</a> or <a href="#">Need help?</a>
-            </p>
-            <div class="clear">&nbsp;</div>
-
-          </form>
-
-          <form id="emailform" style="display:none" method="post" action="#">
+                <p>
+                  <input type="submit" class="btn btn-green big" value="登录"/>    
+                  <!--&nbsp;
+                  <a href="javascript: //;" onClick="$('#emailform').slideDown(); return false;">Forgot password?</a>
+                or
+                <a href="#">Need help?</a>
+                -->
+              </p>
+              <div class="clear">&nbsp;</div>
+            </form>
+            <!--
+              <form id="emailform" style="display:none" method="post" action="#">    
             <div class="box">
               <p id="emailinput">
-                <label for="email">Email:</label><br/>
-                <input type="text" id="email" class="full" value="" name="email"/>
+                <label for="email">Email:</label>
+                <br/>    
+                <input type="text" id="email" class="full" value="" name="email"/>    
               </p>
               <p>
-                <input type="submit" class="btn" value="Send"/>
+                <input type="submit" class="btn" value="Send"/>    
               </p>
             </div>
           </form>
-
+          -->
+          
         </section>
-      </div>
+        <!-- End of login form -->
+        
     </div>
-    <footer id="bottom">
-      <div class="wrapper-login">
-        <p>Copyright &copy; 2010 <b><a HREF="http://www.865171.cn" title="www.865171.cn">www.865171.cn</a></b> | Icons by <a HREF="http://www.865171.cn">865171.cn</a></p>
-      </div>
-    </footer>
-    <!-- End of Page footer -->
-
-    <!-- User interface javascript load -->
-    <%#*<script type="text/javascript" SRC="/javascripts/administry.js"></script>%>
+    <!-- End of Wrapper -->
+  </div>
+  <!-- End of Page content -->
+  
+  <!-- Page footer -->
+  <footer id="bottom">
+    <div class="wrapper-login">
+      <p>Copyright &copy; 2010 <b><a HREF="httpwww.zhaepi.com" title="www.865171.cn">www.zhaepi.com</a></b> | Icons by <a HREF="http://www.zhaepi.com">杭州环保产业协会</a></p>
+    </div>
+  </footer>
