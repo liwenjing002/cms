@@ -55,14 +55,14 @@
                         <td><div class="head">
                             <div id="firstHeadline">
                               <center>
-                                <%if @toutiao_xinwen and @toutiao_xinwen.length >3%>
-                                  <%=link_to @toutiao_xinwen[3].title,articles_homes_path(@toutiao_xinwen[3]),:target=>"_blank",:class=>"title" %>
+                                <%if @toutiao_xinwen and @toutiao_xinwen.length >1%>
+                                  <%=link_to @toutiao_xinwen[0].title,articles_homes_path(@toutiao_xinwen[0]),:target=>"_blank",:class=>"title" %>
                                 <%end%>
                               </center>
                             </div>
                             <ul class="nl">
-                              <%if @toutiao_xinwen and @toutiao_xinwen.length >4%>
-                                <% for i in 4 .. @toutiao_xinwen.length-1%>
+                              <%if @toutiao_xinwen and @toutiao_xinwen.length >2%>
+                                <% for i in 1 .. @toutiao_xinwen.length-1%>
                                   <li> <%=link_to @toutiao_xinwen[i].title,articles_homes_path(@toutiao_xinwen[i]),:target=>"_blank" %></li>
                                 <%end%>
                               <%end%>
