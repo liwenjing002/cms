@@ -56,14 +56,14 @@
                             <div id="firstHeadline">
                               <center>
                                 <%if @toutiao_xinwen and @toutiao_xinwen.length >0%> 
-                                  <%=link_to strip_html(@toutiao_xinwen[0].title,20),articles_homes_path(@toutiao_xinwen[0]),:target=>"_blank",:class=>"title" %>
+                                  <%=link_to strip_html(@toutiao_xinwen[0].title,20),articles_homes_path(@toutiao_xinwen[0]),:target=>"_blank",:class=>"title",:title=>@toutiao_xinwen[0].title %>
                                 <%end%>
                               </center>
                             </div>
                             <ul class="nl">
                               <%if @toutiao_xinwen and @toutiao_xinwen.length >1%>
                                 <% for i in 1 .. @toutiao_xinwen.length-1%>
-                                  <li> <%=link_to strip_html(@toutiao_xinwen[i].title,20),articles_homes_path(@toutiao_xinwen[i]),:target=>"_blank" %></li>
+                                  <li> <%=link_to strip_html(@toutiao_xinwen[i].title,20),articles_homes_path(@toutiao_xinwen[i]),:target=>"_blank",:title=>@toutiao_xinwen[i].title  %></li>
                                 <%end%>
                               <%end%>
                             </ul>
