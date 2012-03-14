@@ -63,19 +63,19 @@
                   <%if @forum.children.length >0 %>
                     <%@forum.children.each do |forum|%>
                       <li>
-                        <%=link_to(forum.name,forums_homes_path(forum))%>
+                        <%=link_to(forum.name,"/homes/forums/#{forum.id}")%>
                       </li>
                     <%end%>
                   <%else if @forum.father%>
                       <%@forum.father.children.each do |forum|%>
                         <li>
-                          <%=link_to(forum.name,forums_homes_path(forum))%>
+                          <%=link_to(forum.name,"/homes/forums/#{forum.id}")%>
                         </li>
                       <%end%>
                  <%else%>
                       <%Forum.find(:all,:conditions=>["father_id is null"]).each do |forum|%>
                         <li>
-                          <%=link_to(forum.name,forums_homes_path(forum))%>
+                          <%=link_to(forum.name,"/homes/forums/#{forum.id}")%>
                         </li>
                       <%end%>
                     <%end%>

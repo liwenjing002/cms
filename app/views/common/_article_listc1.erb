@@ -2,7 +2,7 @@
 <% a =f.articles_father.length >0 ? f.articles_father(:order=>"create_at desc",:limit=>"10") : f.articles(:order=>"create_at desc",:limit=>"10") %>
 <div class="tl"></div>
 <div class="tr"></div>
-<div class="tm"><div class="moreR"> <%=link_to("更多 > >",forums_homes_path(Forum.find_by_code(code)))%></div>
+<div class="tm"><div class="moreR"> <%=link_to("更多 > >","/homes/forums/#{Forum.find_by_code(code).id}")%></div>
   <span class="tt1"><%= Forum.find_by_code(code).name %></span>
 </div>
 <div class="wrapper">

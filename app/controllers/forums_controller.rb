@@ -1,6 +1,7 @@
 class ForumsController < ApplicationController
   # GET /forums
   # GET /forums.xml
+   cache_sweeper :forums_sweeper, :only => [:create, :update, :destroy]  
   layout "admin"
   def index
     @forums = Forum.paginate :page => params[:page]||1,
