@@ -40,6 +40,6 @@ module Huanhao
     config.filter_parameters += [:password]
 	config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
     config.autoload_paths += %w(#{RAILS_ROOT}/app/sweepers)  
-    config.action_controller.page_cache_directory = RAILS_ROOT + "/public/cache/"  
+    #config.action_controller.page_cache_directory = RAILS_ROOT + "/public/cache/"  
   end
 end
