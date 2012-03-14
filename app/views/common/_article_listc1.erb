@@ -64,7 +64,7 @@ $("#<%=code%>").animate({"scrollTop" : $("#<%=code%>").scrollTop()+stepsize +"px
           <ul>
             <%a.each do |article|%>
               <li>
-                <div class="bul"><%=link_to strip_html(article.title,len=42,endss="..."),articles_homes_path(article),:tager=>"_blank"%>
+                <div class="bul"><%=link_to strip_html(article.title,len=42,endss="..."),"/homes/articles/#{article.id}",:tager=>"_blank"%>
                 </div>
               </li>
             <%end%>
@@ -76,7 +76,7 @@ $("#<%=code%>").animate({"scrollTop" : $("#<%=code%>").scrollTop()+stepsize +"px
     <%else%>
       <div class="bul" >
         <%a.each do |article|%>
-          <%=link_to strip_html(article.title,len=42,endss="..."),articles_homes_path(article),:tager=>"_blank"%>
+          <%=link_to strip_html(article.title,len=42,endss="..."),"/homes/articles/#{article.id}",:tager=>"_blank"%>
         <%end%>
       </div>
     <%end%>

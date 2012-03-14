@@ -12,7 +12,7 @@
         <%if @articles and @articles.length >0%>
           <div class="summary">
             <div class="imgDiv" style="float:left">
-              <%=link_to image_tag(@articles[0].picture ?  @articles[0].picture.data.url(:thumb) : "/images/missing.png",:width=>"120",:height=>"90"),articles_homes_path(@articles[0]),:tager=>"_blank"%>
+              <%=link_to image_tag(@articles[0].picture ?  @articles[0].picture.data.url(:thumb) : "/images/missing.png",:width=>"120",:height=>"90"),"/homes/articles/#{@articles[0].id}",:tager=>"_blank"%>
             </div>
             <div class="cont">
               <div class="title">
@@ -28,7 +28,7 @@
     <ul class="nl">
       <%if @articles and @articles.length >1%>
         <%for i in 1 .. @articles.length-1%>
-          <li><%=link_to @articles[i].title,articles_homes_path(@articles[i]),:tager=>"_blank"%></li>
+          <li><%=link_to @articles[i].title,"/homes/articles/#{@articles[i].id}",:tager=>"_blank"%></li>
         <%end%>
       <%end%>
     </ul>

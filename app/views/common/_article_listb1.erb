@@ -12,7 +12,7 @@
     <ul class="nl">
       <%a.each do |article|%>
         <li>
-          <%=link_to article.title,articles_homes_path(article),:tager=>"_blank"%>
+          <%=link_to article.title,"/homes/articles/#{article.id}",:tager=>"_blank"%>
         </li>
 <%end%>
       </ul>

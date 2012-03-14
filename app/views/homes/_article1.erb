@@ -78,12 +78,12 @@
                 <%if i%2 ==0%><div class="nearNews"><%end%>
                  <%if i%2 ==0%>
                     <div class="prevNews">
-                      <%=link_to re_articles[i].title,articles_homes_path( re_articles[i])%>
+                      <%=link_to re_articles[i].title,"/homes/articles/#{ re_articles[i].id}"%>
                     </div>
                   <%end%>
                   <%if i%2 ==1%>
                     <div class="nextNews">
-                      <%=link_to re_articles[i].title,articles_homes_path(re_articles[i])%>
+                      <%=link_to re_articles[i].title,"/homes/articles/#{ re_articles[i].id}"%>
                     </div>
                   <%end%>
                   <%if i%2 ==1%>   </div><%end%>
@@ -171,7 +171,7 @@
                 <ul class="dnl">
                   <%Article.find(:all,:order=>"read_num desc",:limit=>20).each do |article|%>
                     <li>
-                      <%= link_to raw("<span class='diggN'>#{article.read_num ? article.read_num : 0}</span>#{article.title}"),articles_homes_path(article) %>
+                      <%= link_to raw("<span class='diggN'>#{article.read_num ? article.read_num : 0}</span>#{article.title}"),"/homes/articles/#{article.id}"%>
                     </li>
                   <%end%>
                 </ul>

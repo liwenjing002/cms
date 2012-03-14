@@ -25,7 +25,7 @@ class HomesController < ApplicationController
   end
 
   def articles
-    @article = Article.find(params[:format])
+    @article = Article.find(params[:id])
     if @article.read_num
     @article.read_num +=1
     else

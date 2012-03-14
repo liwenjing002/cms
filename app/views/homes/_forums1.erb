@@ -101,7 +101,7 @@
                 <ul class="dnl">
                   <%Article.find(:all,:order=>"read_num desc",:limit=>20).each do |article|%>
                     <li>
-                      <%= link_to raw("<span class='diggN'>#{article.read_num ? article.read_num : 0}</span>#{article.title}"),articles_homes_path(article) %>
+                      <%= link_to raw("<span class='diggN'>#{article.read_num ? article.read_num : 0}</span>#{article.title}"),"/homes/articles/#{article.id}" %>
                     </li>
                   <%end%>
                 </ul>
@@ -125,7 +125,7 @@
                 <ul class="nl">
                   <%Forum.find_by_code('toutiao').articles(:order=>"update_at desc",:limit=>"9").each do |article|%>
                     <li>
-                      <%= link_to raw("<span class='diggN'>#{article.read_num ? article.read_num : 0}</span>#{article.title}"),articles_homes_path(article) %>
+                      <%= link_to raw("<span class='diggN'>#{article.read_num ? article.read_num : 0}</span>#{article.title}"),"/homes/articles/#{article.id}"%>
                     </li>
                   <%end%>
                 </ul>

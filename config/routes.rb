@@ -11,6 +11,12 @@ match '/homes/forums/:id/:page',
   :page => nil ,
   :id => nil  
 
+ match '/homes/articles/:id',  
+  :controller => 'homes',  
+  :action => 'articles',  
+  :requirements => {:id=>/\d+/},  
+  :id => nil   
+
 match '/homes/forums/:id/',  
   :controller => 'homes',  
   :action => 'forums',  
