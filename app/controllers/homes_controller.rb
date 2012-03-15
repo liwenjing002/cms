@@ -19,7 +19,7 @@ class HomesController < ApplicationController
     @forum = Forum.find(params[:id])
     articles = @forum.articles_father.length >0 ? @forum.articles_father : @forum.articles
     @articles = articles.paginate :page => params[:page]||1,
-                            :per_page=>1
+                            :per_page=>10
      @template_id = "1"
     render :layout=>"home"+@template_id
   end
