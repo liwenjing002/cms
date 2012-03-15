@@ -9,7 +9,6 @@ class PaginationDetailLinkRenderer < WillPaginate::LinkRenderer
     @options[:container] ? @template.content_tag(:div, html, html_attributes) : html  
   end  
 
-  protected
 
     def url_for(page)
 
@@ -23,15 +22,14 @@ class PaginationDetailLinkRenderer < WillPaginate::LinkRenderer
 
            if action_name == "forums"
 
-               return "/homes/forums/#{params[:id]/#{page}"
+               return "/homes/forums/#{params[:id]}/#{page}"
 
            end
-
        else
 
           super(page) #调用WillPaginate的默认生成的url
 
        end
-     end
+  end
   
 end
