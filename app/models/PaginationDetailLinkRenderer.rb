@@ -32,5 +32,6 @@ class PaginationDetailLinkRenderer < WillPaginate::LinkRenderer
           super(page) #调用WillPaginate的默认生成的url
 
        end
+     end
   
 end
