@@ -28,6 +28,7 @@ match '/homes/forums/:id/',
       collection do
         get :forums
         get :articles
+        get :read
       end
   end
   resources :forums do

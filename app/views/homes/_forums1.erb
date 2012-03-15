@@ -27,11 +27,11 @@
                     <div class="hr"></div>
                     <div class="diggC"><ul class="digg"><li class="digg1"><%=article.read_num%></li><li class="digg2"><a href="#" >点击数</a></li></ul></div>
                     <div class="cont">
-                      <div class="title"><%= link_to strip_html(article.title,64),articles_homes_path(article) ,:target=>"_blank"%></div>
+                      <div class="title"><%= link_to strip_html(article.title,64),"/homes/articles/#{article.id}" ,:target=>"_blank"%></div>
                       <div class="sum"></div>
                       <div class="foot">
                         <div style="float:right">
-                          <%= link_to "查看全文",articles_homes_path(article) ,:target=>"_blank"%>
+                          <%= link_to "查看全文","/homes/articles/#{article.id}" ,:target=>"_blank"%>
                         </div>日期：<span><%=article.updated_at.strftime("%Y-%m-%d")%></span>
                           作者：<%=article.author%><span></span>
                       </div>
@@ -39,7 +39,7 @@
                   </div>
                 <%end%>
                 <div class="pager">
-                  <%= will_paginate @articles,:previous_label => '上一页', :next_label => '下一页'  %>
+                  <%= will_paginate @articles,:previous_label => '上一页', :next_label => '下一页'   %>
                 </div>
               </div>
             </div>
