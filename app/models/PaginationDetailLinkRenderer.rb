@@ -1,4 +1,4 @@
-class PaginationDetailLinkRenderer < WillPaginate::LinkRenderer  
+class PaginationDetailLinkRenderer #< WillPaginate::LinkRenderer  
   
   def to_html  
     links = @options[:page_links] ? windowed_links : []  
