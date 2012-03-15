@@ -46,4 +46,5 @@ Huanhao::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  config.action_controller.perform_caching = true  
 end

@@ -2,7 +2,7 @@
 <% a =f.articles_father.length >0 ? f.articles_father(:order=>"create_at desc",:limit=>"10") : f.articles(:order=>"create_at desc",:limit=>"10") %>
 <div class="tl"></div>
 <div class="tr"></div>
-<div class="tm"><div class="moreR"> <%=link_to("更多 > >",forums_homes_path(Forum.find_by_code(code)))%></div>
+<div class="tm"><div class="moreR"> <%=link_to("更多 > >","/homes/forums/#{Forum.find_by_code(code).id}")%></div>
   <span class="tt1"><%= Forum.find_by_code(code).name %></span>
 </div>
 <div class="wrapper">
@@ -64,7 +64,8 @@ $("#<%=code%>").animate({"scrollTop" : $("#<%=code%>").scrollTop()+stepsize +"px
           <ul>
             <%a.each do |article|%>
               <li>
-                <div class="bul"><%=link_to strip_html(article.title,len=42,endss="..."),articles_homes_path(article),:tager=>"_blank"%>
+                <div class="bul"> <%=link_to raw(strip_html(article.title,len=42,endss="...")+" <span style='float:right;'><font size='1'>#{article.updated_at.strftime('%Y-%m-%d')}</font></span>
+                    "),"/homes/articles/#{article.id}",:tager=>"_blank"%>
                 </div>
               </li>
             <%end%>
@@ -76,7 +77,7 @@ $("#<%=code%>").animate({"scrollTop" : $("#<%=code%>").scrollTop()+stepsize +"px
     <%else%>
       <div class="bul" >
         <%a.each do |article|%>
-          <%=link_to strip_html(article.title,len=42,endss="..."),articles_homes_path(article),:tager=>"_blank"%>
+          <%=link_to strip_html(article.title,len=42,endss="..."),"/homes/articles/#{article.id}",:tager=>"_blank"%>
         <%end%>
       </div>
     <%end%>

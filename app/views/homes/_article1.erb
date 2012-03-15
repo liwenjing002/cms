@@ -21,14 +21,14 @@
             <div class="tm">
               <div class="moreR">
 			背景：
-                <img src="/images/pic/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#EDF0F5" alt="#EDF0F5" onclick="ContentBg(&quot;#EDF0F5&quot;)" />
-                <img src="/images/pic/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#FAFBE6" alt="#FAFBE6" onclick="ContentBg(&quot;#FAFBE6&quot;)"/>
-                <img src="/images/pic/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#FFF2E2" alt="#FFF2E2" onclick="ContentBg(&quot;#FFF2E2&quot;)"/>
-                <img src="/images/pic/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#FDE6E0" alt="#FDE6E0" onclick="ContentBg(&quot;#FDE6E0&quot;)"/>
-                <img src="/images/pic/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#F3FFE1" alt="#F3FFE1" onclick="ContentBg(&quot;#F3FFE1&quot;)"/>
-                <img src="/images/pic/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#DAFAF3" alt="#DAFAF3" onclick="ContentBg(&quot;#DAFAF3&quot;)"/>
-                <img src="/images/pic/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#EAEAEF" alt="#EAEAEF" onclick="ContentBg(&quot;#EAEAEF&quot;)"/>
-                <img src="/images/pic/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#FFF" alt="默认" onclick="ContentBg(&quot;&quot;)"/>
+                <img src="/images/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#EDF0F5" alt="#EDF0F5" onclick="ContentBg(&quot;#EDF0F5&quot;)" />
+                <img src="/images/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#FAFBE6" alt="#FAFBE6" onclick="ContentBg(&quot;#FAFBE6&quot;)"/>
+                <img src="/images/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#FFF2E2" alt="#FFF2E2" onclick="ContentBg(&quot;#FFF2E2&quot;)"/>
+                <img src="/images/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#FDE6E0" alt="#FDE6E0" onclick="ContentBg(&quot;#FDE6E0&quot;)"/>
+                <img src="/images/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#F3FFE1" alt="#F3FFE1" onclick="ContentBg(&quot;#F3FFE1&quot;)"/>
+                <img src="/images/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#DAFAF3" alt="#DAFAF3" onclick="ContentBg(&quot;#DAFAF3&quot;)"/>
+                <img src="/images/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#EAEAEF" alt="#EAEAEF" onclick="ContentBg(&quot;#EAEAEF&quot;)"/>
+                <img src="/images/b.gif" style="cursor:pointer;width:7px;height:6px;border:1px solid #999;background:#FFF" alt="默认" onclick="ContentBg(&quot;&quot;)"/>
               </div>
               <span class="tt">阅读文章</span>
             </div>
@@ -78,12 +78,12 @@
                 <%if i%2 ==0%><div class="nearNews"><%end%>
                  <%if i%2 ==0%>
                     <div class="prevNews">
-                      <%=link_to re_articles[i].title,articles_homes_path( re_articles[i])%>
+                      <%=link_to re_articles[i].title,"/homes/articles/#{ re_articles[i].id}"%>
                     </div>
                   <%end%>
                   <%if i%2 ==1%>
                     <div class="nextNews">
-                      <%=link_to re_articles[i].title,articles_homes_path(re_articles[i])%>
+                      <%=link_to re_articles[i].title,"/homes/articles/#{ re_articles[i].id}"%>
                     </div>
                   <%end%>
                   <%if i%2 ==1%>   </div><%end%>
@@ -101,61 +101,7 @@
             <div class="bm"></div>
           </div>
 
-          <!--
-                    <div class="mframe mR">
-                      <div class="tl"></div>
-                      <div class="tr"></div>
-                      <div class="tm">
-                        <span class="tt">本文评论</span>
-		 	　　<a href="../../../remark.aspx?id=55" target="_blank">查看全部评论</a> <span class="gray">(0)</span>
-                      </div>
-                      <div class="wrapper">
-                        <div class="ml"></div>
-                        <div class="mr"></div>
-                        <div class="mm">
-                          <table width="100%" style="margin:6px">
-                            <tbody><tr><td width="300">
-                                  <form name="fmRemarkSt" onsubmit="return remark.post(this);">
-                                    <input type="hidden" value="1" name="face">
-			表情： <img src="../../../pic/b.gif" class="face1" style="cursor:pointer;vertical-align:middle" href="###" onclick="remark.dispFace(this)" onmouseout="remark.hideFace()">
-			姓名： <input type="text" name="username" value="" maxlength="15" size="10" class="inputbg" disabled="">
-                                    <input type="checkbox" id="rmAnonymitySt" onclick="remark.anony(this)"><label for="rmAnonymitySt">匿名</label>
-			字数 <input type="text" id="bodyLen" size="3" readonly="readonly" style="border-width:0;background:transparent;vertical-align:middle" value="0">
-                                    <br>
-			点评：
-                                    <textarea name="body" cols="40" rows="4" onkeydown="remark.dispLen(this)" onkeyup="remark.handle(event,this);remark.dispLen(this)" style="width:20em;height:60px;margin:3px 0;overflow-y:auto"></textarea>
-                                    <br>
-		　　　<input type="checkbox" checked="checked" id="rmAgreeSt"><label for="rmAgreeSt">同意评论声明</label>
-		　　　<button type="submit" style="width:50px">发表</button>
-                                  </form>
-                                </td><td>
-			评论声明
-                                  <ul style="list-style-type:square;margin:5px 0 0 1em;padding:0">
-                                    <li>尊重网上道德，遵守中华人民共和国的各项有关法律法规</li>
-                                    <li>承担一切因您的行为而直接或间接导致的民事或刑事法律责任</li>
-                                    <li>本站管理人员有权保留或删除其管辖留言中的任意内容</li>
-                                    <li>本站有权在网站内转载或引用您的评论</li>
-                                    <li>参与本评论即表明您已经阅读并接受上述条款</li>
-                                  </ul>
-                                </td></tr>
-                            </tbody></table>
-
-          <%= javascript_include_tag 'show' %>
-                          <script type="text/javascript">
-                            remark.maxSize=200;
-                            remark.minSize=2;
-                            iwms.vCode="7F4965E0";
-                            remark.user.length==0 ? $i("rmAnonymitySt").click() : $i("rmAnonymitySt").form.username.value=remark.user;
-                          </script>
-
-                          <div class="reCont" id="reContainer"></div>
-                        </div>
-                      </div>
-                      <div class="bl"></div>
-                      <div class="br"></div>
-                      <div class="bm"></div>
-                    </div>
-          -->
+         
         </td><td width="250" valign="top">
 
           <div class="lframe">
@@ -171,7 +117,8 @@
                 <ul class="dnl">
                   <%Article.find(:all,:order=>"read_num desc",:limit=>20).each do |article|%>
                     <li>
-                      <%= link_to raw("<span class='diggN'>#{article.read_num ? article.read_num : 0}</span>#{article.title}"),articles_homes_path(article) %>
+                      <%= link_to raw("<span class='diggN'>#{article.read_num ? article.read_num : 0}</span> #{strip_html(article.title,8)}"),"/homes/articles/#{article.id}"%>
+                      <span style="float:right;"><font size="1"><%= article.updated_at.strftime("%Y-%m-%d")%></font></span>
                     </li>
                   <%end%>
                 </ul>
@@ -181,26 +128,16 @@
             <div class="br"></div>
             <div class="bm"></div>
           </div>
-          <!--
-                    <div class="lframe">
-                      <div class="tl"></div>
-                      <div class="tr"></div>
-                      <div class="tm">
-                        <span class="tt">热门评论</span>
-                      </div>
-                      <div class="wrapper">
-                        <div class="ml"></div>
-                        <div class="mr"></div>
-                        <div class="mm">
-                          <div class="reCont reCont2"></div>
-                        </div>
-                      </div>
-                      <div class="bl"></div>
-                      <div class="br"></div>
-                      <div class="bm"></div>
-                    </div>
-          -->
+          en
 
         </td></tr>
     </tbody></table>
 </div>
+
+<script type="text/javascript">
+            $.ajax({                                                
+                type: "GET",                                    
+                url: "/homes/read?id=<%=@article.id%>"
+            });
+
+</script>

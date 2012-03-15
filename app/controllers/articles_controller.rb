@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   layout "admin"
+  cache_sweeper :articles_sweeper, :only => [:create, :update, :destroy]  
   def index
     @articles = Article.paginate :page => params[:page]||1,
                             :per_page=>10,

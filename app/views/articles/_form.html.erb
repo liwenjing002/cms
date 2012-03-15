@@ -65,16 +65,13 @@
             </div>
           </div>
 
-            <p class="box"><input type="submit" class="btn btn-green big" value="提交"> </p>
+            <p class="box"><input type="submit" class="btn btn-green big" value="提交">  <%= link_to '返回', articles_path,:class=>"btn btn-green big" ,:style=>"vertical-align: middle;margin-bottom: 0;"%></p>
 
         </fieldset>
 
       <%end%>
 
   </div>
-
-  <%= link_to '显示', @article %> |
-  <%= link_to '返回', articles_path %>
 </div>
 
 

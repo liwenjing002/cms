@@ -33,13 +33,14 @@
 
 			<%= select( :forum,:father_id, Forum.find(:all,:conditions=>"father_id is null").collect {|p| [ p.name, p.id ] }, { :include_blank => true }) %>
 
-          <p class="box"><input type="submit" class="btn btn-green big" value="提交"> or <input type="reset" class="btn" value="Reset"></p>
+          <p class="box"><input type="submit" class="btn btn-green big" value="提交"> or 
+            <input type="reset" class="btn" value="重置">
+            <%= link_to '返回', forums_path,:class=>"btn btn-green big" ,:style=>"vertical-align: middle;margin-bottom: 0;"%>
+          </p>
 
             </fieldset>
 
           <%end%>
-		  <%= link_to '查看', @forum %> |
-		<%= link_to '返回', forums_path %>
           </div>
 
           <!-- End of Wrapper -->
