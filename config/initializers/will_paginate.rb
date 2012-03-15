@@ -1,1 +1,1 @@
-#WillPaginate::ViewHelpers.pagination_options[:renderer] = 'PaginationDetailLinkRenderer'
+WillPaginate::ViewHelpers.pagination_options[:renderer] = 'PaginationDetailLinkRenderer'
