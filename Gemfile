@@ -1,4 +1,5 @@
-source 'http://rubygems.org'
+#source 'http://rubygems.org'
+source 'http://ruby.taobao.org/'
 #source "http://gems.rubyforge.org"
 gem 'rails', '3.0.7'
 gem 'will_paginate',          '~> 3.0.pre2'
