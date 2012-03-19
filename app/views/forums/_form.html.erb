@@ -1,4 +1,6 @@
-﻿<div id="page" style="height:500px">
+<%= javascript_include_tag :ckeditor %>
+<%= javascript_include_tag "prototype" %>﻿
+<div id="page" style="height:500px">
   <!-- Wrapper -->
   <div class="wrapper">
     <!-- Left column/section -->
@@ -31,7 +33,17 @@
             <%= f.input :order_num,:class=>"half" %>
           </p>
 
-			<%= select( :forum,:father_id, Forum.find(:all,:conditions=>"father_id is null").collect {|p| [ p.name, p.id ] }, { :include_blank => true }) %>
+          <p>
+
+
+             <label for="productdesc">页面模版</label><br/>
+            <%= select( :forum,:page_temp_id, PageTemp.find(:all).collect {|p| [ p.name, p.id ] }, { :include_blank => true }) %>
+          </p>
+          <p>
+        <label for="productdesc">父级板块</label><br/>
+
+          <%= select( :forum,:father_id, Forum.find(:all,:conditions=>"father_id is null").collect {|p| [ p.name, p.id ] }, { :include_blank => true }) %>
+          </p>
 
           <p class="box"><input type="submit" class="btn btn-green big" value="提交"> or 
             <input type="reset" class="btn" value="重置">

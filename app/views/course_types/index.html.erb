@@ -1,0 +1,44 @@
+
+                <%= javascript_include_tag :defaults %>
+                  <!-- Wrapper -->
+                  <div class="wrapper">
+                    <!-- Left column/section -->
+                    <section class="column width6 first">
+                      <div id="add_user" class="dataTables_length">
+                        <%= link_to '新增课程类别', new_course_type_path %></div>
+                        <table class="display stylized" id="example">
+                          <thead>
+                            <tr>
+                              <th style="width: 125px;">课程类别</th>
+                              <th style="width: 125px;">类别描述</th>
+                              <th style="width: 50px; ">查看</th>
+                              <th style="width: 50px; ">编辑</th>
+                              <th style="width: 50px; ">删除</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <% @course_types.each do |course_type| %>
+                              <tr class="gradeA odd">
+                                <td>
+                                  <%= course_type.name %></td>
+                                  <td>
+                                    <%= course_type.desc %></td>
+
+                                    <td>
+                                      <%= link_to '查看', course_type %></td>
+                                      <td>
+                                        <%= link_to '编辑', edit_course_type_path(course_type) %></td>
+                                        <td>
+                                          <%= link_to '删除', course_type, :confirm =>'Are you sure?', :method => :delete %></td>
+                                        </tr>
+                                        <%end%></tbody>
+                                      </table>
+                                      <%= will_paginate @course_type , :params =>
+                                        {:title=> params[:title]} %>
+                                        <div class="clear">&nbsp;</div>
+
+                                      </section>
+                                      <!-- End of Left column/section -->
+
+                                      <!-- End of Right column/section --> </div>
+                                    <!-- End of Wrapper --> </div>

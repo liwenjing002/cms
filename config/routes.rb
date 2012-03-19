@@ -1,4 +1,10 @@
 Huanhao::Application.routes.draw do
+  resources :page_temps
+
+  resources :course_types
+
+  resources :courses
+
   resources :adds
 
   resources :friend_links

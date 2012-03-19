@@ -1,0 +1,39 @@
+
+
+<div id="page" style="height:500px">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">
+
+      <h3>新增/编辑课程类别</h3>
+      <% if @course_type.errors.any? %>
+        <% @course_type.errors.full_messages.each do |msg| %>
+          <div class="box box-info"><%=msg%></div>
+        <% end %>
+      <%end%>
+
+      <%= simple_form_for @course_type,:html=>{:multipart=>true} do |f| %>
+        <fieldset>
+          <legend>新增/编辑课程类别</legend>
+
+          <p>
+            <label class="required" for="name">课程类别</label><br/>
+            <%= f.text_field :name,:class=>"half" %>
+          </p>
+
+          <p>
+            <label class="required" for="name">课程类别描述</label><br/>
+            <%= f.text_field :desc,:class=>"half" %>
+          </p>
+
+            <p class="box"><input type="submit" class="btn btn-green big" value="提交">  <%= link_to '返回', course_types_path,:class=>"btn btn-green big" ,:style=>"vertical-align: middle;margin-bottom: 0;"%></p
+
+        </fieldset>
+
+      <%end%>
+      
+  </div>
+
+  <!-- End of Wrapper -->
+</div>
