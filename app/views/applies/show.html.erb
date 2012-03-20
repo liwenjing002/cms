@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @apply.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @apply.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @apply.phone %>
+</p>
+
+<p>
+  <b>Qq:</b>
+  <%= @apply.qq %>
+</p>
+
+<p>
+  <b>Memo:</b>
+  <%= @apply.memo %>
+</p>
+
+
+<%= link_to 'Edit', edit_apply_path(@apply) %> |
+<%= link_to 'Back', applies_path %>

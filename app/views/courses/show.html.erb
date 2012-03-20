@@ -1,0 +1,30 @@
+<div id="page" style="min-height:500px">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">					
+
+      <h3>查看课程</h3>
+
+
+        <fieldset>
+          <legend>查看课程</legend>
+
+          <p>
+            <label class="required">课程名称</label><br>
+             <%= @course.name %>
+          </p>
+
+                    <p>
+            <label class="required">描述</label><br>
+             <%= raw @course.desc%>
+          </p>
+                   		
+       </fieldset>
+
+<%= link_to '编辑', edit_course_path(@course_type) %> |
+<%= link_to '返回', course_path %>
+          </div>
+          <!-- End of Wrapper -->
+          </div>
+

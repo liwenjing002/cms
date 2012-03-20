@@ -1,0 +1,52 @@
+<%= javascript_include_tag :ckeditor %>
+<%= javascript_include_tag "prototype" %>
+
+<div id="page" style="height:500px">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">
+
+      <h3>新增/编辑模板</h3>
+      <% if @page_temp.errors.any? %>
+        <% @page_temp.errors.full_messages.each do |msg| %>
+          <div class="box box-info"><%=msg%></div>
+        <% end %>
+      <%end%>
+
+      <%= simple_form_for @page_temp,:html=>{:multipart=>true} do |f| %>
+        <fieldset>
+          <legend>新增/编辑模板</legend>
+
+          <p>
+            <label class="required" for="name">模板</label><br/>
+            <%= f.text_field :name,:class=>"half" %>
+          </p>
+
+          <p>
+            <label class="required" for="name">模板类型</label><br/>
+           <%= select( :page_temp,:temp_type, [["主页"],["页头"],["页尾"],["栏目"],["文章"],["课程"]]) %>
+          </p>
+          </p>
+
+          <p>
+            <label class="required" for="name">是否生效</label><br/>
+           <%= select( :page_temp,:is_acticity, [["是","true"],["否","false"]]) %>
+          </p>
+          </p>
+
+          <p>
+            <label class="required" for="name">模板描述</label><br/>
+             <%= f.cktext_area  :content,:input_html => {},:language=>"zh-cn",:cols=>"80"%>
+          </p>
+
+            <p class="box"><input type="submit" class="btn btn-green big" value="提交">  <%= link_to '返回', page_temps_path,:class=>"btn btn-green big" ,:style=>"vertical-align: middle;margin-bottom: 0;"%></p
+
+        </fieldset>
+
+      <%end%>
+      
+  </div>
+
+  <!-- End of Wrapper -->
+</div>

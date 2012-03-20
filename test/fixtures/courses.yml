@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  type_id: 1
+  age_range: MyString
+  name: MyString
+  desc: MyText
+
+two:
+  type_id: 1
+  age_range: MyString
+  name: MyString
+  desc: MyText

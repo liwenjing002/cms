@@ -10,12 +10,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111107144516) do
+ActiveRecord::Schema.define(:version => 20120320072257) do
 
   create_table "adds", :force => true do |t|
     t.string   "name"
     t.integer  "picture_id"
     t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "applies", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "qq"
+    t.text     "memo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -32,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20111107144516) do
     t.integer  "picture_id"
     t.integer  "forum_id"
     t.string   "author"
+    t.integer  "page_temp_id"
   end
 
   create_table "ckeditor_assets", :force => true do |t|
@@ -49,6 +60,23 @@ ActiveRecord::Schema.define(:version => 20111107144516) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], :name => "idx_ckeditor_assetable"
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_ckeditor_assetable_type"
 
+  create_table "course_types", :force => true do |t|
+    t.string   "name"
+    t.string   "desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "courses", :force => true do |t|
+    t.integer  "type_id"
+    t.string   "age_range"
+    t.string   "name"
+    t.text     "desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "page_temp_id"
+  end
+
   create_table "events", :force => true do |t|
     t.string   "name"
     t.integer  "user_id"
@@ -63,6 +91,7 @@ ActiveRecord::Schema.define(:version => 20111107144516) do
     t.datetime "updated_at"
     t.integer  "order_num"
     t.string   "code"
+    t.integer  "page_temp_id"
   end
 
   create_table "friend_links", :force => true do |t|
@@ -70,6 +99,15 @@ ActiveRecord::Schema.define(:version => 20111107144516) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "page_temps", :force => true do |t|
+    t.string   "name"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "temp_type"
+    t.boolean  "is_acticity"
   end
 
   create_table "permissions", :force => true do |t|

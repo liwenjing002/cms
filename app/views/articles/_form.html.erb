@@ -64,7 +64,12 @@
               <%=  select  :article, :forum_id,[[@article.forum.name,@article.forum.id] ] if @article.forum%>
             </div>
           </div>
+                  <p>
 
+
+             <label for="productdesc">页面模版</label><br/>
+            <%= select( :article,:page_temp_id, PageTemp.find(:all,:conditions=>["temp_type='文章' and is_acticity=true"]).collect {|p| [ p.name, p.id ] }) %>
+          </p>
             <p class="box"><input type="submit" class="btn btn-green big" value="提交">  <%= link_to '返回', articles_path,:class=>"btn btn-green big" ,:style=>"vertical-align: middle;margin-bottom: 0;"%></p>
 
         </fieldset>

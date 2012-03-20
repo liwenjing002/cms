@@ -15,7 +15,6 @@ test:
       port: 3306
       username: root
       password: lee123
-
 production:
       host: localhost
       adapter: mysql

@@ -1,4 +1,12 @@
 Huanhao::Application.routes.draw do
+  resources :applies
+
+  resources :page_temps
+
+  resources :course_types
+
+  resources :courses
+
   resources :adds
 
   resources :friend_links
@@ -31,6 +39,14 @@ match '/homes/forums/:id/',
         get :read
       end
   end
+
+
+  resources :admin do
+      collection do
+        get :delete_cache
+      end
+  end
+
   resources :forums do
   collection do
   get :select_with_ajax

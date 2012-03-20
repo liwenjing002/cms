@@ -1,14 +1,14 @@
 # encoding: utf-8
-class HomesController < ApplicationController
+
+class HomesController < ApplicationController 
   caches_page :index, :forums,:articles
-   before_filter :get_head
+  before_filter :get_head
+  layout "home"
 
   def index
-    
     @toutiao_xinwen = Forum.find_by_code('toutiao').articles(:order=>"update_at desc",:limit=>"9")
     @guonei_xinwen = Forum.find_by_code('guoneixinwen').articles(:order=>"upate_at desc",:limit=>"10")
-    @template_id = "1"
-    render :layout=>"home"+@template_id
+    @template_id = "2"
   end
 
   def get_head
@@ -20,8 +20,6 @@ class HomesController < ApplicationController
     articles = @forum.articles_father.length >0 ? @forum.articles_father : @forum.articles
     @articles = articles.paginate :page => params[:page]||1,
                             :per_page=>10
-     @template_id = "1"
-    render :layout=>"home"+@template_id
   end
 
   def articles
@@ -32,8 +30,6 @@ class HomesController < ApplicationController
       @article.read_num = 0
     end
     @article.save
-     @template_id = "1"
-    render :layout=>"home"+@template_id
   end
 
 def read
@@ -46,6 +42,9 @@ def read
     @article.save
      render :text =>"SUCCESS"
 end
+
+
+
 
 
 end

@@ -1,0 +1,35 @@
+<div id="page" style="min-height:500px">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Left column/section -->
+    <section class="column width6 first">					
+
+      <h3>查看模板</h3>
+
+
+        <fieldset>
+          <legend>查看模板</legend>
+
+          <p>
+            <label class="required">模板</label><br>
+             <%= @page_temp.name %>
+          </p>
+           <p>
+            <label class="required">模板类型</label><br>
+             <%= @page_temp.temp_type %>
+          </p>
+
+                    <p>
+            <label class="required">描述</label><br>
+             <%= @page_temp.content%>
+          </p>
+                   		
+       </fieldset>
+
+<%= link_to '编辑', edit_page_temp_path(@page_temp) %> |
+<%= link_to '返回', page_temps_path %>
+          </div>
+          <!-- End of Wrapper -->
+          </div>
+
+

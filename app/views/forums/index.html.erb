@@ -19,6 +19,7 @@
             <tr>
               <th style="width: 125px;">首页显示顺序</th>
               <th style="width: 125px;">版块名称</th>
+              <th style="width: 125px;">模板名称</th>
               <th style="width: 137px; ">上级版块</th>
               <th style="width: 137px; ">查看</th>
               <th style="width: 170px; ">编辑</th>
@@ -30,6 +31,7 @@
               <tr class="gradeA odd">
                 <td><%= forum.order_num %></td>
                 <td><%= forum.name %></td>
+                 <td><%= forum.page_temp.name if forum.page_temp%></td>
                 <td><%if forum.father%><%=forum.father.name%><%end%></td>
                 <td><%= link_to '查看', forum %></td>
                 <td><%= link_to '编辑', edit_forum_path(forum) %></td>
