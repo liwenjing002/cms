@@ -1,4 +1,8 @@
 Huanhao::Application.routes.draw do
+  get 'kindeditor/images_list'
+
+  post 'kindeditor/upload'
+
   resources :adds
 
   resources :friend_links
