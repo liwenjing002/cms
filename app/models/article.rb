@@ -6,7 +6,8 @@ belongs_to :father_forum,:class_name=>"Forum",:foreign_key => "first_forum_id"
 validates_presence_of :title,:message => "标题不为空"
 validates_presence_of :context,:message => "正文不为空"
 belongs_to :user
-belongs_to :picture,:class_name=>"Ckeditor::Picture"
+ belongs_to :page_temp
+ belongs_to :picture,:class_name=>"Ckeditor::Picture"
 
     before_save :fix_ckeditor_attachment_paths
 

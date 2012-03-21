@@ -1,0 +1,48 @@
+
+
+
+                <%= javascript_include_tag :defaults %>
+                  <!-- Wrapper -->
+                  <div class="wrapper">
+                    <!-- Left column/section -->
+                    <section class="column width6 first">
+                      <div id="add_user" class="dataTables_length">
+                        <%= link_to '新增模板', new_page_temp_path %></div>
+                        <table class="display stylized" id="example">
+                          <thead>
+                            <tr>
+                              <th style="width: 125px;">名称</th>
+                               <th style="width: 125px;">模板类型</th>
+                                <th style="width: 125px;">是否生效</th>
+                              <th style="width: 50px; ">查看</th>
+                              <th style="width: 50px; ">编辑</th>
+                              <th style="width: 50px; ">删除</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <% @page_temps.each do |page_temp| %>
+                              <tr class="gradeA odd">
+                                <td>
+                                  <%= page_temp.name %></td>
+                                   <td>
+                                    <%= page_temp.temp_type %></td>
+                                    <td>
+                                    <%= page_temp.is_acticity ? "是":"否" %></td>
+                                    <td>
+                                      <%= link_to '查看', page_temp %></td>
+                                      <td>
+                                        <%= link_to '编辑', edit_page_temp_path(page_temp) %></td>
+                                        <td>
+                                          <%= link_to '删除', page_temp, :confirm =>'Are you sure?', :method => :delete %></td>
+                                        </tr>
+                                        <%end%></tbody>
+                                      </table>
+                                      <%= will_paginate @page_temp , :params =>
+                                        {:title=> params[:title]} %>
+                                        <div class="clear">&nbsp;</div>
+
+                                      </section>
+                                      <!-- End of Left column/section -->
+
+                                      <!-- End of Right column/section --> </div>
+                                    <!-- End of Wrapper --> </div>

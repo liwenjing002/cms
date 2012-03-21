@@ -1,0 +1,53 @@
+<%= javascript_include_tag :ckeditor %>
+  <%= javascript_include_tag "prototype" %>
+
+    <div id="page" style="min-height: 800px">
+      <!-- Wrapper -->
+      <div class="wrapper">
+        <!-- Left column/section -->
+        <section class="column width6 first">
+
+          <h3>新增课程</h3>
+          <% if @course.errors.any? %>
+            <% @course.errors.full_messages.each do |msg| %>
+              <div class = 'box box-info'>
+                <%=msg%></div>
+                <% end %>
+                  <%end%>
+
+                    <%= simple_form_for @course,:html=>
+                      {:multipart=>true} do |f| %>
+                      <fieldset>
+                        <legend>新增课程</legend>
+
+                        <p>
+                          <label class="required" for="title">课程名称</label>
+                          <br>
+                          <%= f.text_field :name,:class=>"half" %></p>
+
+                          <p>
+                            <label  for="title">课程分类</label>
+                            <br>
+                            <%=  select  :course, :type_id,CourseType.all.collect {|p| [ p.name, p.id ]} %></p>
+
+                            <p>
+                              <label  for="title">年龄段</label>
+                              <br>
+                              <%=  select  :course, :age_range,[["3-6岁","3-6岁"],["7-12岁","7-12岁"],["13-18岁","13-18岁"]] %></p>
+
+                              <p>
+                                <label for="productdesc">正文</label>
+                                <br/>
+                                <%= f.cktext_area   :desc,:input_html =>{},:language=>"zh-cn"%></p>
+                                   <label for="productdesc">页面模版</label><br/>
+            <%= select( :course,:page_temp_id, PageTemp.find(:all,:conditions=>["temp_type='文章' and is_acticity=true"]).collect {|p| [ p.name, p.id ] }) %>
+                                <p class="box">
+                                  <input type="submit" class="btn btn-green big" value="提交">
+                                  <%= link_to '返回', courses_path,:class=>
+                                    "btn btn-green big" ,:style=>"vertical-align: middle;margin-bottom: 0;"%>
+                                  </p>
+
+                                </fieldset>
+
+                                <%end%></div>
+                              </div>

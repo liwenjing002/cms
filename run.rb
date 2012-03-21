@@ -1,0 +1,1 @@
+system('thin start -c c:\pro\cms -p 3000 -e production') 

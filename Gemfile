@@ -11,6 +11,8 @@ gem 'mysql'
 gem 'ckeditor', :git => 'git://github.com/galetahub/ckeditor.git'
 gem 'orm_adapter',:git=>'git://github.com/ianwhite/orm_adapter.git'
 gem "paperclip"
+#gem 'mongrel', '>= 1.2.0.pre2'
+#gem 'dispatcher'
 # Use unicorn as the web server
 # gem 'unicorn'
 

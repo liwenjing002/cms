@@ -70,5 +70,32 @@ module ApplicationHelper
       end
     end
   end
+
+
+  def create_html_top
+   @temp_top =  PageTemp.find_by_temp_type_and_is_acticity("页头",true) 
+   ERB.new(@temp_top.content).result(self.send( :binding ))  
+  end
+
+  def create_html_body
+    if request.parameters[:controller] == "homes" 
+        
+      if request.parameters[:action] == "index"
+         @temp_body =  PageTemp.find_by_temp_type_and_is_acticity("主页",true)
+      elsif  request.parameters[:action] == "forums"
+          @temp_body = @forum.page_temp
+         @temp_body =  PageTemp.find_by_temp_type_and_is_acticity("栏目",true) if  @temp_body==nil
+      elsif  request.parameters[:action] == "articles"
+        @temp_body = @article.page_temp
+         @temp_body =  PageTemp.find_by_temp_type_and_is_acticity("文章",true)  if  @temp_body==nil
+      end       
+    end
+     ERB.new(raw(@temp_body.content)).result(self.send( :binding ))  
+  end
+
+  def create_html_foot
+   @temp_foot =  PageTemp.find_by_temp_type_and_is_acticity("页尾",true)
+   ERB.new(@temp_foot.content).result(self.send( :binding ))  
+  end
   
 end
