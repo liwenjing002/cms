@@ -17,6 +17,7 @@
         <li><a href="/course_types">课程类别</a></li>
         <li><a href="/forums">版块管理</a></li>
         <li><a href="/page_temps">模板管理</a></li>
+        <li><a href="##" id="filemanager">静态资源管理</a></li>
         <!--<li><a href="/friend_links">友情链接管理</a></li>-->
         <li><a href="/users">用户管理</a></li>
         <li><a href="/adds">广告管理</a></li>	
@@ -25,3 +26,22 @@
     </nav>
   </div>
 </header>
+    <script>
+      KindEditor.ready(function(K) {
+        var editor = K.editor({
+          fileManagerJson : '/kindeditor/images_list'
+        });
+        K('#filemanager').click(function() {
+          editor.loadPlugin('filemanager', function() {
+            editor.plugin.filemanagerDialog({
+              viewType : 'VIEW',
+              dirName : 'image',
+              clickFn : function(url, title) {
+                K('#url').val(url);
+                editor.hideDialog();
+              }
+            });
+          });
+        });
+      });
+      </script>

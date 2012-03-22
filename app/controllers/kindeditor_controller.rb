@@ -12,12 +12,14 @@ class KindeditorController < ApplicationController
 
   def images_list 
     
-   @images=KindeditorImage.order(order_param)
+   @images=KindeditorImage.order("data_file_name")
     @json = []  
     for image in @images  
       temp =  %Q/{"filesize" : #{image.data.size},  
       "filename" : "#{image.data_file_name}",  
       "dir_path" : "#{image.data.url}",  
+      "is_dir" :false,
+      "is_photo" :true,
       "datetime" : "#{image.created_at}"}/  
       @json << temp     
     end     
