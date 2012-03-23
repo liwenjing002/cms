@@ -8,7 +8,9 @@ class AdminController < ApplicationController
  cache_dir = ActionController::Base.page_cache_directory
       FileUtils.rm_r(Dir.glob(cache_dir+"/homes/")) rescue Errno::ENOENT
       RAILS_DEFAULT_LOGGER.info("Cache directory cache_dir/homes/ fully sweeped.")
-  redirect_to articles_path, :alert => "Watch it, mister!"
+      respond_to do |format|
+      format.js
+    end
       
 end
 

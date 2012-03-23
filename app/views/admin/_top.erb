@@ -21,7 +21,7 @@
         <!--<li><a href="/friend_links">友情链接管理</a></li>-->
         <li><a href="/users">用户管理</a></li>
         <li><a href="/adds">广告管理</a></li>	
-        <li><a href="/admin/delete_cache">清除缓存</a></li> 
+        <li><%=link_to "清除缓存","/admin/delete_cache",:remote=>true%></li> 
       </ul>
     </nav>
   </div>
