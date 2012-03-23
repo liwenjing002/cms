@@ -1,12 +1,12 @@
 class PageTemp < ActiveRecord::Base
-	 private
-    def randomize_file_name
+	
+    before_save :chang_html
 
-      unless data_file_name.nil?
-        extension = File.extname(data_file_name).downcase
-        self.data.instance_write(:file_name, "#{ActiveSupport::SecureRandom.hex(16)}#{extension}")
-      end
-    end
+  def chang_html
+      self.content = self.content.gsub(/&lt;\%/, '<%')
+       self.content = self.content.gsub(/\%&gt;/, '%>')
+  end
+
 
 	def validate  
 

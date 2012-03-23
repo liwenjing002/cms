@@ -10,7 +10,7 @@ gem "simple_form",:git=>'git://github.com/plataformatec/simple_form.git'
 gem 'mysql'
 gem 'ckeditor', :git => 'git://github.com/galetahub/ckeditor.git'
 gem 'orm_adapter',:git=>'git://github.com/ianwhite/orm_adapter.git'
-gem "paperclip"
+gem "paperclip", "~> 2.7"
 # Use unicorn as the web server
 # gem 'unicorn'
 

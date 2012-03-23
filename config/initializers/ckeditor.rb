@@ -13,7 +13,7 @@ if Object.const_defined?("Ckeditor")
 
     # Allowed attachment file types for upload.
     # Set to nil or [] (empty array) for all file types
-    # config.attachment_file_types = ["doc", "docx", "xls", "odt", "ods", "pdf", "rar", "zip", "tar", "swf"]
+  config.attachment_file_types = ["doc", "docx", "xls", "odt", "ods", "pdf", "rar", "zip", "tar", "swf","js","css"]
     
     # Ckeditor files destination path (default 'public/javascripts')
     config.path = 'public/javascripts'
@@ -27,6 +27,8 @@ PAPERCLIP_PHOTO_OPTIONS = {
 #:path          => "/images/public/system/:rails_env/:class/:attachment/:id/:style/:fingerprint.:extension", 
 	:url  => "/ckeditor_assets/pictures/:id/:style_:basename.:extension",
     :path => ":rails_root/public/ckeditor_assets/pictures/:id/:style_:basename.:extension",
-	:styles => { :content => '800>', :thumb => '118x100#' },
+	:styles => { :content => '800>', :thumb => '118x100' },
   :default_url   => "/images/missing_:style.png"
 }
+Paperclip.options[:command_path] = "C:/sofe/ImageMagick-6.5.6-Q8" 
+#Paperclip.options[:command_path] = "C:/sofe/ImageMagick-6.7.6-Q16"
