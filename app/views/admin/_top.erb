@@ -21,12 +21,20 @@
         <!--<li><a href="/friend_links">友情链接管理</a></li>-->
         <li><a href="/users">用户管理</a></li>
         <li><a href="/adds">广告管理</a></li>	
-        <li><%=link_to "清除缓存","/admin/delete_cache",:remote=>true%></li> 
+        <li><%=link_to "清除缓存","##",:id=>"clean_cache"%></li> 
       </ul>
     </nav>
   </div>
 </header>
     <script>
+    $("#clean_cache").click(function(){
+     jQuery.ajax({                   
+                    type: "GET",                                    
+                    url: "/admin/delete_cache"
+            
+                });
+
+})
       KindEditor.ready(function(K) {
         var editor = K.editor({
           fileManagerJson : '/kindeditor/images_list'
