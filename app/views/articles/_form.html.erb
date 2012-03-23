@@ -38,7 +38,8 @@
 
           <p>
             <label for="productdesc">正文</label><br/>
-            <%= f.cktext_area   :context,:input_html => {},:language=>"zh-cn"%>
+             <%= f.text_area :context,:id => "kindeditor" %>
+            <%#= f.cktext_area   :context,:input_html => {},:language=>"zh-cn"%>
 		
 
           </p>

@@ -55,7 +55,7 @@
 
 <%= link_to '编辑', edit_article_path(@article) %> |
 <%= link_to '返回', articles_path %>
-<%= link_to '编辑预览', "/homes/articles/#{@article.id}" %> |
+<%= link_to '预览', "/homes/articles/#{@article.id}",:target=>"_blank" %> |
           </div>
           <!-- End of Wrapper -->
           </div>
