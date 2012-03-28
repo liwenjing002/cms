@@ -72,9 +72,18 @@ module ApplicationHelper
   end
 
 
+
+
+def create_html(html)
+  top =  create_html_top
+  body = html.to_s
+  foot = create_html_foot
+   ERB.new(top+body+foot).result(self.send( :binding ))  
+end
+
   def create_html_top
    @temp_top =  PageTemp.find_by_temp_type_and_is_acticity("页头",true) 
-   ERB.new(@temp_top.content).result(self.send( :binding ))  
+   @temp_top.content 
   end
 
   def create_html_body
@@ -90,12 +99,12 @@ module ApplicationHelper
          @temp_body =  PageTemp.find_by_temp_type_and_is_acticity("文章",true)  if  @temp_body==nil
       end       
     end
-     ERB.new(raw(@temp_body.content)).result(self.send( :binding ))  
+    return @temp_body.content
   end
 
   def create_html_foot
    @temp_foot =  PageTemp.find_by_temp_type_and_is_acticity("页尾",true)
-   ERB.new(@temp_foot.content).result(self.send( :binding ))  
+   @temp_foot.content
   end
   
 end
