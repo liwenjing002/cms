@@ -6,9 +6,7 @@ class HomesController < ApplicationController
   layout "home"
 
   def index
-    @toutiao_xinwen = Forum.find_by_code('toutiao').articles(:order=>"update_at desc",:limit=>"9")
-    @guonei_xinwen = Forum.find_by_code('guoneixinwen').articles(:order=>"upate_at desc",:limit=>"10")
-    @template_id = "2"
+
   end
 
   def get_head
