@@ -74,9 +74,9 @@ module ApplicationHelper
 
 
 
-def create_html(html)
+def create_html
   top =  create_html_top
-  body = html.to_s
+  body = create_html_body
   foot = create_html_foot
    ERB.new(top+body+foot).result(self.send( :binding ))  
 end
